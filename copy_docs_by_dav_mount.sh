@@ -3,7 +3,7 @@ set -x
 
 USAGE='copy_docs_by_dav_mount.sh <docdir>'
 DAVURL='https://kforge.ros.org/moveit/dav'
-DESTPATH='www/docs/moveit/536'
+DESTPATH='www/536'
 
 if [[ $# -lt 1 ]]; then
   echo $USAGE

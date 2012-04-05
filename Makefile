@@ -4,10 +4,13 @@ DOXYGEN=doxygen
 all:	doc
 
 doc:	$(DOXYFILE)
-	rm -rf html
+	rm -rf webpage/generated
 	$(DOXYGEN) $(DOXYFILE)
 
 website:doc
-	./copy_docs_by_dav_mount.sh html
+	./copy_docs_by_dav_mount.sh webpage
+
+clean:
+	rm -rf webpage/generated
 
 .PHONY:	doc
