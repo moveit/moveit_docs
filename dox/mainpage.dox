@@ -1,7 +1,11 @@
 /**
 \mainpage MoveIt! &mdash; A Planning Framework
 
-MoveIt is a framework for motion planning. Various planning techniques, kinematics, dynamics, collision checking, constraints, visualization, etc. are all included.
+MoveIt is an open source framework that includes various planning techniques, kinematics, dynamics, collision checking, constraints evaluation and sampling, visualization, etc.
+
+The functionality MoveIt includes is centered around planning and executing motion plans for different robot components (such as arms or the mobile base, depending on what controllers are available). Tools for specification of motion plans, configuration and debugging tools, visualization tools, benchmarking are included.
+
+MoveIt can be used as a robust platform for research and application development. Researchers can either develop or add to existing MoveIt functionality. 
 
 
 MoveIt! Components:
@@ -12,6 +16,9 @@ MoveIt! Components:
 - \ref dynamics "Dynamics"
 - \ref visualization "Visualization"
 
+Upcoming release:
 
+0.1 - 
+1.0 - King Julian (Groovy)
 
 */
