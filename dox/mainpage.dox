@@ -3,11 +3,15 @@
 
 MoveIt is an open source framework that includes various planning techniques, kinematics, dynamics, collision checking, constraints evaluation and sampling, visualization, etc.
 
-The functionality MoveIt includes is centered around planning and executing motion plans for different robot components (such as arms or the mobile base, depending on what controllers are available). Tools for specification of motion plans, configuration and debugging tools, visualization tools, benchmarking are included.
+The functionality MoveIt includes is centered around planning and executing motion plans for different robot components (such as arms or the mobile base, depending on what controllers are available). Tools for specification of motion plans, configuration and debugging tools, visualization tools, benchmarking are included. MoveIt can be used as a robust platform for research and application development. 
 
-MoveIt can be used as a robust platform for research and application development. Researchers can either develop or add to existing MoveIt functionality. 
+MoveIt! is organized into three large parts:
+- A C++ core, consisting a C++ libraries that have few dependencies and do not depend on ROS (this is the moveit repository). Only ROS messages and console output are dependencies.
+- A set of packages that are actually ROS nodes and offer the functionality implemented in core C++ libraries in a ROS-friendly manner (this is the movei_ros repository)
+- A set of robot specific packages (this is the the moveit_pr2 repository)
+.
 
-The MoveIt! mascot is King Julian.
+The MoveIt! mascot is <strong>King Julian</strong>.
 
 \section moveit_components MoveIt! Components:
 - \ref motion_planning "Motion Planning"
@@ -16,9 +20,11 @@ The MoveIt! mascot is King Julian.
 - \ref kinematics "Kinematics"
 - \ref dynamics "Dynamics"
 - \ref visualization "Visualization"
+.
 
 \section mainpage_quick_links Quick Links:
 - <a href="namespaces.html"><strong>MoveIt! API</strong></a>
 - \ref download "Download MoveIt!"
+.
 
 */
