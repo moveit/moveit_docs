@@ -7,8 +7,9 @@ The functionality MoveIt includes is centered around planning and executing moti
 
 MoveIt can be used as a robust platform for research and application development. Researchers can either develop or add to existing MoveIt functionality. 
 
+The MoveIt! mascot is King Julian.
 
-MoveIt! Components:
+\section moveit_components MoveIt! Components:
 - \ref motion_planning "Motion Planning"
 - \ref collision_checking "Collision Checking"
 - \ref constraints "Constraint Representation and Evaluation"
@@ -16,9 +17,8 @@ MoveIt! Components:
 - \ref dynamics "Dynamics"
 - \ref visualization "Visualization"
 
-Upcoming release:
-
-0.1 - 
-1.0 - King Julian (Groovy)
+\section mainpage_quick_links Quick Links:
+- <a href="namespaces.html"><strong>MoveIt! API</strong></a>
+- \ref download "Download MoveIt!"
 
 */

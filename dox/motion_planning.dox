@@ -1,0 +1,9 @@
+/**
+\page motion_planning Motion Planning
+
+MoveIt! includes multiple classes of motion planning algorithms:
+- sampling-based motion planners (implementations from <a href="http://ompl.info">OMPL</a>)
+- search-based motion planners (implementations from <a href="http://www.ros.org/wiki/sbpl">SBPL</a>)
+- optimization-based motion planners (CHOMP)
+
+*/

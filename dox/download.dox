@@ -1,6 +1,20 @@
 /**
 \page download Download
 
-Go to <a href="https://kforge.ros.org/moveit/trac">MoveIt!</a>.
+\section latest_release MoveIt! for ROS Fuerte
+
+\code
+sudo apt-get install ros-fuerte-moveit-all
+\endcode
+
+\section source_code Source Code
+
+\code
+# this should be a folder in your ROS package path
+mkdir moveit
+cd moveit
+wget ..../moveit.rosinstall 
+rosinstall . moveit.rosinstall
+\endcode
 
 */

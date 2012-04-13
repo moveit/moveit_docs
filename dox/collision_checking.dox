@@ -1,0 +1,6 @@
+/**
+\page collision_checking Collision Checking
+
+MoveIt! includes the Flexible Collision Checking Library (FCL) to implement collision checking functionality. This library is actually used through the API defined in the collision_detection package. Direct use of FCL is not recommented. Implementations should use the collision_detection API. Additionally, the planning_scene package also includes simple functionality for interacting with collision checking. 
+
+*/
