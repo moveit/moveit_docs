@@ -6,4 +6,17 @@ MoveIt! includes multiple classes of motion planning algorithms:
 - search-based motion planners (implementations from <a href="http://www.ros.org/wiki/sbpl">SBPL</a>)
 - optimization-based motion planners (CHOMP)
 
+\section interfacing_with_planners Interfacing with Motion Planning Algorithms
+
+The primary interface to motion planning algorithms is through plugins. All types of planners implement a \ref planning_plugin "common interface". Based on that interface, a number of other means of interacting with planners are defined: using service calls and using actions.
+In conclusion, there are three possible methods for using motion planers in MoveIt:
+- using the move_group action. This is the simplest means of interaction and also includes execution. The user would only send a goal to the action defined by move_group and the group of joints would be moved (if possible) to the desired goal. move_group also uses a default set of planning_request_adapter plugins, so the method should be more robust without setup effort from the user. This action replaces the 'move_arm' action. Configuration options are available to change the used planning_interface plugin and the set of planning_request_adapter plugins.
+- using a service call. The user can opt to start a particular planner (using its own launch file) and that will make a service call available. The planning request itself has the same format (moveit_msgs::MotionPlanRequest) as with the move_group action. This procedure could be used when execution of plans is not needed
+- via the planning_interface::Planner plugin. This approach is the most efficient one since there is no network communication involved. The planning_interface::Planner::solve() function takes a planning_scene::PlanningScene argument and a request message identical to the ones passed to the action and the service call. If the user needs to make changes to the planning scene before planning, the plugin approach is the recommended one. Please see the planning_scene_monitor::PlanningSceneMonitor class for how to maintain an up-to-date planning_scene::PlanningScene.
+
+
+\section benchmarking Benchmarking
+
+
+
 */
