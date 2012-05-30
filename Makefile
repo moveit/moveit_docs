@@ -7,7 +7,7 @@ doc:	$(DOXYFILE)
 	rm -rf webpage/generated
 	$(DOXYGEN) $(DOXYFILE)
 
-website:doc
+page:	doc
 	./copy_docs_by_dav_mount.sh webpage
 
 clean:
