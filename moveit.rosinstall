@@ -1,6 +1,3 @@
-- git: {local-name: shape_msgs, uri: 'https://kforge.ros.org/shapes/shape_msgs'}
-- git: {local-name: shape_tools, uri: 'https://kforge.ros.org/shapes/shape_tools'}
-- svn: {local-name: octomap_stacks, uri: 'http://alufr-ros-pkg.googlecode.com/svn/trunk/octomap_stacks'}
 - hg: {local-name: robot_model, uri: 'https://kforge.ros.org/robotmodel/robot_model', version: default}
 - hg: {local-name: moveit, uri: 'https://kforge.ros.org/moveit/moveit', version: default}
 - hg: {local-name: moveit_msgs, uri: 'https://kforge.ros.org/moveit/moveit_msgs', version: default}
