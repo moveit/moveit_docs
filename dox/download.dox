@@ -13,7 +13,7 @@ sudo apt-get install ros-fuerte-moveit-all
 # this should be a folder in your ROS package path
 mkdir moveit
 cd moveit
-wget https://kforge.ros.org/moveit/moveit_docs/file/tip/moveit.rosinstall 
+wget https://kforge.ros.org/moveit/moveit_docs/raw-file/tip/moveit.rosinstall
 rosinstall . moveit.rosinstall
 \endcode
 
