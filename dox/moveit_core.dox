@@ -1,0 +1,15 @@
+/**
+\page moveit_core "MoveIt! Core"
+
+MoveIt! Core is a set of C++ libraries that implement basic functionality. This includes:
+- Representation of the robot model  (package name + link for every bullet )
+- Collision detection  (package name + link for every bullet )
+- Constraint evaluation (package name + link for every bullet )
+- Constraint sampling (package name + link for every bullet )
+- Abstract interface to kinematics
+- Abstract interface to motion planning
+- ... add the rest
+
+.
+
+*/

@@ -1,25 +1,35 @@
 /**
 \mainpage MoveIt! &mdash; A Planning Framework
 
-MoveIt is an open source framework that includes various planning techniques, kinematics, dynamics, collision checking, constraints evaluation and sampling, visualization, etc.
+@b MoveIt! is an open source project that includes various planning techniques, kinematics, dynamics, collision checking, constraints evaluation and sampling, visualization, etc.
 
-The functionality MoveIt includes is centered around planning and executing motion plans for different robot components (such as arms or the mobile base, depending on what controllers are available). Tools for specification of motion plans, configuration and debugging tools, visualization tools, benchmarking are included. MoveIt can be used as a robust platform for research and application development. 
-
-MoveIt! is organized into three large parts:
-- A C++ core, consisting a C++ libraries that have few dependencies and do not depend on ROS (this is the moveit repository). Only ROS messages and console output are dependencies.
-- A set of packages that are actually ROS nodes and offer the functionality implemented in core C++ libraries in a ROS-friendly manner (this is the movei_ros repository)
-- A set of robot specific packages (this is the the moveit_pr2 repository)
-.
+The functionality @b MoveIt! includes is centered around planning and executing motion plans for different robots. Tools for specification of motion plans, configuration and debugging tools, visualization tools, benchmarking are included. MoveIt! can be used as a robust platform for research and application development. 
 
 The MoveIt! mascot is <strong>King Julian</strong>.
 
-\section moveit_components MoveIt! Components:
+\section moveit_organization Organization of MoveIt!:
+
+\par
+The MoveIt! software is organized as two components:
+- \ref moveit_core "MoveIt! Core". A set of C++ libraries that have few dependencies and do not depend on the ROS communication mechanism. However, ROS messages are used throughout these libraries.
+- \ref moveit_ros "MoveIt! ROS". A set of packages that are actually ROS nodes and offer the functionality implemented in core C++ libraries in a ROS-friendly manner (this is the movei_ros repository)
+.
+
+\par
+On top of the two components listed above, a third component designed specifically for mobile manipulation is provided: \ref moveit_manipulation "MoveIt! Manipulation".
+
+\par
+MoveIt! does not contain any robot specific settings or launch files. For convenience, the \ref moveit_pr2 "MoveIt! PR2" component is provided  to make it simpler to use MoveIt! with the PR2. However, a separate component for configuring each new robot using MoveIt! is not required, and the robot specific settings should be generated using the  \ref moveit_setup_assistant "MoveIt! Setup Assistant".
+
+
+\section moveit_capabilities Capabilities of MoveIt!:
 - \ref motion_planning "Motion Planning"
 - \ref collision_checking "Collision Checking"
 - \ref constraints "Constraint Representation and Evaluation"
 - \ref kinematics "Kinematics"
 - \ref dynamics "Dynamics"
 - \ref visualization "Visualization"
+- \ref moveit_setup_assistant "Automatic Configuration"
 .
 
 \section mainpage_quick_links Quick Links:

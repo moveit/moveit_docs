@@ -1,0 +1,13 @@
+/**
+\page moveit_ros "MoveIt! ROS"
+
+MoveIt! ROS is a set of tools that make it easier to use \ref moveit_core "MoveIt! Core" with <a href="http://ros.org">ROS</a>. 
+The distinctive characteristic for the software in MoveIt! ROS is that ROS communication is used throughout. The ROS parameter server is used for simpler configuration, ROS nodes are used to provide action interfaces, service interfaces and to publish and receive information via topics.
+
+Some more overview here: how loaders work; what are the main actions & services.
+
+Mention that launch files for launching this functionality are often robot specific because of the need to load the URDF. They are in moveit_pr2.
+
+
+
+*/
