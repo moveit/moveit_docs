@@ -1,5 +1,7 @@
 DOXYFILE=Doxyfile
 DOXYGEN=doxygen
+DEST=/var/www/moveit/
+SOURCE=webpage
 
 all:	doc
 
@@ -8,7 +10,7 @@ doc:	$(DOXYFILE)
 	$(DOXYGEN) $(DOXYFILE)
 
 page:	doc
-	./copy_docs_by_dav_mount.sh webpage
+	cd webpage && ./copy_page.sh
 
 clean:
 	rm -rf webpage/generated
