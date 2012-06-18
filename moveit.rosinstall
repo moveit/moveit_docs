@@ -1,9 +1,8 @@
 - hg: {local-name: robot_model, uri: 'https://kforge.ros.org/robotmodel/robot_model', version: default}
 - hg: {local-name: moveit, uri: 'https://kforge.ros.org/moveit/moveit', version: default}
-- hg: {local-name: moveit_msgs, uri: 'https://kforge.ros.org/moveit/moveit_msgs', version: default}
+# - hg: {local-name: moveit_msgs, uri: 'https://kforge.ros.org/moveit/moveit_msgs', version: default}
 - hg: {local-name: moveit_ros, uri: 'https://kforge.ros.org/moveit/moveit_ros', version: default}
 - hg: {local-name: moveit_manipulation, uri: 'https://kforge.ros.org/moveit/moveit_manipulation', version: default}
 - hg: {local-name: moveit_pr2, uri: 'https://kforge.ros.org/moveit/moveit_pr2', version: default}
 - hg: {local-name: moveit_docs, uri: 'https://kforge.ros.org/moveit/moveit_docs', version: default}
 #- svn: {local-name: sbpl_arm_planning, uri: 'https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/trunk'}
-- svn: {local-name: sbpl, uri: 'https://code.ros.org/svn/wg-ros-pkg/stacks/motion_planners/trunk/sbpl'}
