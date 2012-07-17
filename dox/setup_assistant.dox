@@ -1,22 +1,50 @@
 /**
+\htmlonly
+<img src="../images/setup_assistant/setup_assistant_logo.png" alt="Setup Assistant Logo" style="float:right;margin-left:30px;" />
+\endhtmlonly
+
 \page setup_assistant MoveIt Setup Assistant
 
-The MoveIt Setup Assistant is a graphical user interface for configuring any robot with a URDF to work with the MoveIt planning framework. It is the successor to the <a href="http://www.ros.org/wiki/arm_navigation/Tutorials/tools/Planning%20Description%20Configuration%20Wizard">Arm Navigation Wizard</a> and includes the following tools:
+The MoveIt Setup Assistant is a graphical user interface for configuring any robot with a URDF to work with the MoveIt planning framework. Its primary function is generating Semantic Robot Description Format (<a href="http://www.ros.org/wiki/srdf">SRDF</a>) files and other necessary configuration files. It is the successor to the <a href="http://www.ros.org/wiki/arm_navigation/Tutorials/tools/Planning%20Description%20Configuration%20Wizard">Arm Navigation Wizard</a> and includes the following tools:
 
 - Computes a self-collision matrix to reduce the amount of collision checking a robot performs on itself
 - Assists in creating planning groups, consisting of any combination of joints, links, kinematic chains and subgroups
 - Setup robot poses to allow easily moving groups of joints to pre-defined positions for tasks like calibration
 - Define end effectors semantically that consist of a planning group and a parent link
 - Add virtual joints that semantically describe the relationship of the base_link with the world link
-- Generate a Semantic Robot Description Format (<a href="http://www.ros.org/wiki/srdf">SRDF</a>) file for use with MoveIt
+- Generate a SRDF file for use with MoveIt
 - Generate other YAML and launch files needed for running MoveIt
 
-\section getting_started Setup
+\section getting_started Setup and Run
 
-\section running Running
+\ref download "Download" and \ref installation "Install" MoveIt. Then run the command:
+\code
+rosmake moveit_setup_assistant
+\endcode
+
+To start the Setup Assistant simply run the command:
+\code
+rosrun moveit_setup_assistant setup_assistant
+\endcode
+
+\section start_screen Start Screen
+
+At the start screen
+
+\subsection new Create New MoveIt Configuration Package
+Something
+
+\subsection exist Edit Existing MoveIt Configuration Package
+Something
 
 \section self_collisions Self-Collisions
 
+\section planning_groups Planning Groups
 
+\section end_effectors End Effetors
+
+\section virtual_joints Virtual Joints
+
+\section configuration_files Configuration Files
 
 */
