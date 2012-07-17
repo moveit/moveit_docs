@@ -1,10 +1,10 @@
 /**
 \page api_overview API Overview
 
-\section xxx test
+\section xxx Diagram
 
-More test
- - <img src="../images/api_diagram.png" alt="API Diagram"/>
-.
+Also viewable as <a href="../pdfs/moveit_api_diagram.pdf">PDF</a>
+<img src="../images/moveit_api_diagram.png" alt="API Diagram"/>
+
 
 */

@@ -34,6 +34,7 @@ MoveIt! does not contain any robot specific settings or launch files. For conven
 
 \section mainpage_quick_links Quick Links:
 - <a href="namespaces.html"><strong>MoveIt! API</strong></a>
+- \ref setup_assistant "MoveIt! Setup Assistant"
 - \ref download "Download MoveIt!"
 .
 
