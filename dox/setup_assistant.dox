@@ -5,7 +5,7 @@
 
 \page setup_assistant MoveIt Setup Assistant
 
-The MoveIt Setup Assistant is a graphical user interface for configuring any robot with a URDF to work with the MoveIt planning framework. Its primary function is generating Semantic Robot Description Format (<a href="http://www.ros.org/wiki/srdf">SRDF</a>) files and other necessary configuration files. It is the successor to the <a href="http://www.ros.org/wiki/arm_navigation/Tutorials/tools/Planning%20Description%20Configuration%20Wizard">Arm Navigation Wizard</a> and includes the following tools:
+The MoveIt Setup Assistant is a graphical user interface for configuring any robot with a URDF to work with the MoveIt planning framework. Its primary function is generating Semantic Robot Description Format (<a href="http://www.ros.org/wiki/srdf">SRDF</a>) files and other necessary configuration files. It is the successor to the <a href="http://www.ros.org/wiki/arm_navigation/Tutorials/tools/Planning%20Description%20Configuration%20Wizard">Arm Navigation Wizard</a> and performs the following functions:
 
 - Computes a self-collision matrix to reduce the amount of collision checking a robot performs on itself
 - Assists in creating planning groups, consisting of any combination of joints, links, kinematic chains and subgroups
@@ -29,22 +29,42 @@ rosrun moveit_setup_assistant setup_assistant
 
 \section start_screen Start Screen
 
-At the start screen
-
 \subsection new Create New MoveIt Configuration Package
-Something
+Coming Soon
+<img width="800px" src="../images/setup_assistant/Screenshot-0a.png" alt="Setup Assistant Screenshot" />
 
 \subsection exist Edit Existing MoveIt Configuration Package
-Something
+Coming Soon
+<img width="800px" src="../images/setup_assistant/Screenshot-0b.png" alt="Setup Assistant Screenshot" />
+<img width="800px" src="../images/setup_assistant/Screenshot-1.png" alt="Setup Assistant Screenshot" />
 
-\section self_collisions Self-Collisions
+\section self_collisions Self-Collisions Screen
+Coming Soon
+<img width="800px" src="../images/setup_assistant/Screenshot-2.png" alt="Setup Assistant Screenshot" />
 
-\section planning_groups Planning Groups
+\section planning_groups Planning Groups Screen
+Coming Soon
+<img width="800px" src="../images/setup_assistant/Screenshot-3.png" alt="Setup Assistant Screenshot" />
+<img width="800px" src="../images/setup_assistant/Screenshot-4.png" alt="Setup Assistant Screenshot" />
+<img width="800px" src="../images/setup_assistant/Screenshot-5.png" alt="Setup Assistant Screenshot" />
 
-\section end_effectors End Effetors
+\section robot_poses Robot Poses Screen
+Coming Soon
+<img width="800px" src="../images/setup_assistant/Screenshot-6.png" alt="Setup Assistant Screenshot" />
+<img width="800px" src="../images/setup_assistant/Screenshot-7.png" alt="Setup Assistant Screenshot" />
 
-\section virtual_joints Virtual Joints
+\section end_effectors End Effectors Screen
+Coming Soon
+<img width="800px" src="../images/setup_assistant/Screenshot-8.png" alt="Setup Assistant Screenshot" />
+<img width="800px" src="../images/setup_assistant/Screenshot-9.png" alt="Setup Assistant Screenshot" />
 
-\section configuration_files Configuration Files
+\section virtual_joints Virtual Joints Screen
+Coming Soon
+<img width="800px" src="../images/setup_assistant/Screenshot-10.png" alt="Setup Assistant Screenshot" />
+<img width="800px" src="../images/setup_assistant/Screenshot-11.png" alt="Setup Assistant Screenshot" />
+
+\section configuration_files Configuration Files Screen
+Coming Soon
+<img width="800px" src="../images/setup_assistant/Screenshot-12.png" alt="Setup Assistant Screenshot" />
 
 */
