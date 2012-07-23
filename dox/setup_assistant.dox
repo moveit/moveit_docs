@@ -67,4 +67,19 @@ Coming Soon
 Coming Soon
 <img width="800px" src="../images/setup_assistant/Screenshot-12.png" alt="Setup Assistant Screenshot" />
 
+\section next_steps Next Steps
+Once you have generated you robot's MoveIt Configuration Package we can immediately test the result by running you robot within the MoveIt Visualizer. To do so, first build that package using the following command:
+
+\code
+rosmake moveit_ros
+rosmake moveit_visualizer_ros
+rosmake pr2_moveit_apps
+\endcode
+
+Then run the visualizer for your robot, replacing "ROBOT_MOVEIT_CONFIG" with the MoveIt Configuration Package you just generated:
+
+\code
+roslaunch ROBOT_MOVEIT_CONFIG moveit_visualizer.launch
+\endcode
+
 */

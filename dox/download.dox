@@ -9,6 +9,8 @@ sudo apt-get install ros-fuerte-moveit-all
 
 \section source_code Source Code
 
+\b Prerequisites: install <a href="http://www.ros.org/wiki/rosinstall">rosinstall</a>
+
 \code
 # this should be a folder in your ROS package path
 mkdir moveit
