@@ -8,7 +8,7 @@ The functionality @b MoveIt! includes is centered around planning and executing 
 The MoveIt! mascot is <strong>King Julian</strong>.
 
 \htmlonly
-<div style="border:solid;border-width:1px;border-color:#FFCC00;background-color:#FFE680;padding:10px;margin-top:10px;font-size:16px;">
+<div style="border:solid;border-width:1px;border-color:#FFCC00;background-color:#FFE680;padding:10px;margin-top:10px;font-size:16px;line-height:150%;">
 <b>Note:</b> <b>MoveIt!</b> is still under <i>heavy</i> development and is not ready for release. Use at your own risk.<br/>
 The first release is targeted for ROS Groovy.
 </div>
@@ -19,7 +19,7 @@ The first release is targeted for ROS Groovy.
 \par
 The MoveIt! software is organized as two components:
 - \ref moveit_core "MoveIt! Core". A set of C++ libraries that have few dependencies and do not depend on the ROS communication mechanism. However, ROS messages are used throughout these libraries.
-- \ref moveit_ros "MoveIt! ROS". A set of packages that are actually ROS nodes and offer the functionality implemented in core C++ libraries in a ROS-friendly manner (this is the movei_ros repository)
+- \ref moveit_ros "MoveIt! ROS". A set of packages that are actually ROS nodes and offer the functionality implemented in core C++ libraries in a ROS-friendly manner (this is the moveit_ros repository)
 .
 
 \par
@@ -43,10 +43,11 @@ For a quick visual diagram, see the \ref api_overview "MoveIt! API Overview"
 .
 
 \section mainpage_quick_links Quick Links:
-- <a href="namespaces.html">MoveIt! API</a>
-- \ref api_overview "MoveIt! API Overview"
-- \ref setup_assistant "MoveIt! Setup Assistant"
 - \ref download "Download MoveIt!"
+- \ref api_overview "MoveIt! API Overview"
+- <a href="namespaces.html">List of namespaces</a>
+- \ref setup_assistant "MoveIt! Setup Assistant"
+
 .
 
 */
