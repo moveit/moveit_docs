@@ -36,8 +36,9 @@ For a quick visual diagram, see the \ref api_overview "MoveIt! API Overview"
 - \ref constraints "Constraint Representation and Evaluation"
 - \ref kinematics "Kinematics"
 - \ref dynamics "Dynamics"
+- \ref trajectory_execution "Trajectory Execution"
 - \ref visualization "Visualization"
-- \ref moveit_setup_assistant "Automatic Configuration"
+- \ref setup_assistant "Automatic Configuration"
 .
 
 \section mainpage_quick_links Quick Links:
