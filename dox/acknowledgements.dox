@@ -1,0 +1,10 @@
+/**
+\page acknowledgements Acknowledgements
+
+The authors would like to thank everyone at <a href="http://www.willowgarage.com">Willow Garage</a> for their contributions to MoveIt! itself and its dependencies. We would also like to thank a number of research groups whose software packages make important contributions to the core of MoveIt!:
+- <a href="http://kavrakilab.org">Lydia Kavraki's Lab</a> at Rice University for developing and maintaining <a href="http://ompl.info">OMPL</a>
+- <a href="http://www.cs.cmu.edu/~maxim/">Max Likhachev's Lab</a> at CMU for developing and maintaining <a href="http://www.ros.org/wiki/sbpl">SBPL</a>
+- <a href="http://gamma.cs.unc.edu/">Dinesh Manocha's Lab</a> at University of North Carolina, for developing and maintaining <a href="http://gamma.cs.unc.edu/FCL/">FCL</a>.
+
+
+*/

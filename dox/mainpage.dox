@@ -5,7 +5,7 @@
 
 The functionality @b MoveIt! includes is centered around planning and executing motion plans for different robots. Tools for specification of motion plans, configuration and debugging tools, visualization tools, benchmarking are included. MoveIt! can be used as a robust platform for research and application development. 
 
-The MoveIt! mascot is <strong>King Julian</strong>.
+The MoveIt! mascot is \ref king_julien "King Julien".
 
 \htmlonly
 <div style="border:solid;border-width:1px;border-color:#FFCC00;background-color:#FFE680;padding:10px;margin-top:10px;font-size:16px;line-height:150%;">
