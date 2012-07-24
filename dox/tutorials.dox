@@ -1,8 +1,9 @@
 /**
 \page tutorials Tutorials
 
-\section section1 Section
+\section setup_assist Setup Assistant
 
+To setup any robot with a URDF (Universal Robot Description Format), run the \ref setup_assistant "Setup Assistant".
 
 
 */

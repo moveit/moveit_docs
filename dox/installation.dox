@@ -1,7 +1,64 @@
 /**
 \page installation Install MoveIt
 
-\section latest_release MoveIt! for ROS Fuerte
+\section prereq Prerequisites
+This document assumes you are using ros-shadow-fixed as your source. To add this version remove the regular ROS package source using Synaptic and run the following command:
+\code
+sudo sh -c 'echo "deb http://packages.ros.org/ros-shadow-fixed/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
+\endcode
+
+Additionally, you need to have installed the tool <a href="http://www.ros.org/wiki/rosinstall">rosinstall</a>
+
+\section workspace_setup Workspace Setup
+Setup your tree to develop and use MoveIt on Fuerte:\n
+
+1. Install fuerte underlay from debs:
+\code
+sudo apt-get update
+sudo apt-get install ros-fuerte-moveit-core
+\endcode
+
+\b Note:
+- The ros-fuerte-fcl used to be installed automatically. For the duration of the summer, FCL is included as a package due to frequent updates. If you are getting errors about FCL svn repo not being found when cloning the MoveIt repo, your version of mercurial is too old (this happens on Ubuntu Lucid). Do this to install a new PPA for mercurial:
+\code
+sudo add-apt-repository ppa:mercurial-ppa/releases 
+sudo apt-get update
+sudo apt-get install mercurial
+\endcode
+
+2. rosinstall everything:
+\code
+mkdir moveit
+cd moveit
+wget https://kforge.ros.org/moveit/moveit_docs/raw-file/tip/moveit.rosinstall
+rosinstall . /opt/ros/fuerte moveit.rosinstall
+. setup.bash
+\endcode
+You may want to source the setup.bash file at the bottom of your ~/.bashrc file to set it up every time.
+
+3. Install other dependencies:
+\code
+sudo apt-get install ros-fuerte-warehousewg ros-fuerte-control
+\endcode
+
+4. Build an example utility:
+\code
+rosmake moveit_visualization_ros move_group_interface
+\endcode
+
+\b Note: 
+- If an FCL error occurs during build you might need to update the FCL checkout:
+\code
+roscd fcl
+svn update
+\endcode
+
+5. If you want to run with the universal robot and your rosmake -a command is successful, then try the following:
+\code
+roslaunch pr2_moveit_apps pr2_moveit_visualizer.launch
+\endcode
+
+This will bring up the robot in planning space (i.e. not hooked up to the robot or sim).  Things will look wonky until you drag the rviz display part out from the far left side of the window and change the Fixed Frame to 'world_link'.  You can play around with it there - be aware that the IK is a little wonky and you may need to drag it around for a while to get it to find valid poses.  If you are hooked up to the actual robot run:
 
 
 

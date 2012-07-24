@@ -17,7 +17,7 @@ The MoveIt Setup Assistant is a graphical user interface for configuring any rob
 
 \section getting_started Setup and Run
 
-\ref download "Download" and \ref installation "Install" MoveIt. Then run the command:
+\ref installation "Install" MoveIt, then run the command:
 \code
 rosmake moveit_setup_assistant
 \endcode
