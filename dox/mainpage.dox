@@ -34,7 +34,7 @@ For a quick visual diagram, see the \ref api_overview "MoveIt! API Overview"
 \section moveit_capabilities Capabilities of MoveIt!:
 - \ref motion_planning "Motion Planning"
 - \ref collision_checking "Collision Checking"
-- \ref constraints "Constraint Representation and Evaluation"
+- \ref constraint_representation "Constraint Representation and Evaluation"
 - \ref kinematics "Kinematics"
 - \ref dynamics "Dynamics"
 - \ref trajectory_execution "Trajectory Execution"
