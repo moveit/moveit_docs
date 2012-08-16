@@ -1,0 +1,19 @@
+/**
+\page pipeline_overview Pipeline Overview
+
+\section highlevel_diagram High Level Diagram
+
+A high level attempt to explain the process from user input to motor control output.
+
+Also viewable as <a href="../pdfs/moveit_highlevel.pdf">PDF</a>
+<img src="../images/moveit_highlevel.png" alt="Highlevel Diagram"/>
+
+\section package_diagram Package-Centric Pipeline Diagram
+
+A more detailed attempt to explain the process from user input to motor control output, via package names.
+
+Also viewable as <a href="../pdfs/moveit_pipeline.pdf">PDF</a>
+<img src="../images/moveit_pipeline.png" alt="Pipeline Diagram"/>
+
+
+*/

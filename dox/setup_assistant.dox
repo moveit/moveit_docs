@@ -15,6 +15,8 @@ The MoveIt Setup Assistant is a graphical user interface for configuring any rob
 - Generate a SRDF file for use with MoveIt
 - Generate other YAML and launch files needed for running MoveIt
 
+In this documentation we will step through setting up MoveIt with NASA's Robonaut using their freely available URDF found in their <a href="http://ros.org/wiki/nasa_r2_common">nasa_r2_common</a> package. During this tutorial we will document the Setup Assistant (SA) and its workings.
+
 \section getting_started Setup and Run
 
 \ref installation "Install" MoveIt, then run the command:
@@ -27,48 +29,95 @@ To start the Setup Assistant simply run the command:
 rosrun moveit_setup_assistant setup_assistant
 \endcode
 
+
+
+
+
+
+
+
+
+
+
+
 \section start_screen Start Screen
 
+Once the MoveIt SA is loaded you should be presented with a screen that offers two choices: "Create New MoveIt Configuration Package" or "Exit Existing MoveIt Configuration Pacakge". These options are explained in the following two sections:
+
 \subsection new Create New MoveIt Configuration Package
-Coming Soon
-<img width="800px" src="../images/setup_assistant/Screenshot-0a.png" alt="Setup Assistant Screenshot" />
+
+<img src="../images/setup_assistant/1.png" alt="Setup Assistant Screenshot" width="800px" />
+
+This is the option you want if this is your first time running the SA. You can load either a standard <a href="http://www.ros.org/wiki/urdf">URDF</a> file or a <a href="http://en.wikipedia.org/wiki/COLLADA">COLLADA</a> file (second feature not fully tested).
+
+<b>Note:</b> many URDF files use <a href="http://ros.org/wiki/xacro">XACRO</a> script to make generating a URDF easier. This is fine, but you must first convert your XACRO file to standard XML using the command:
+\code
+rosrun xacro xacro.py YOUR_ROBOT.xacro > YOUR_ROBOT.urdf
+\endcode
+
+\n
+To choose your URDF, click the browse button and navigate to the location of your URDF file. Preferrably the SA is designed to have all URDFs located within a ROS package. In this convenstion said package is named something like <i>pr2_description</i>. But having the URDF located in a package is not required.
+
+<img src="../images/setup_assistant/3.png" alt="Setup Assistant Screenshot" width="800px" />
 
 \subsection exist Edit Existing MoveIt Configuration Package
-Coming Soon
-<img width="800px" src="../images/setup_assistant/Screenshot-0b.png" alt="Setup Assistant Screenshot" />
-<img width="800px" src="../images/setup_assistant/Screenshot-1.png" alt="Setup Assistant Screenshot" />
+
+The second option is to load a configuration package that has already been created. Assuming that your configuration package is within your ROS workspace, simply type the name of your package. Or you can browse to the directory.
+<img src="../images/setup_assistant/2.png" alt="Setup Assistant Screenshot" width="800px" />
+
+\subsection done Load Files
+
+Once your options are selected, click the "Load Files" button at the bottom right and proceed using the left side navigation bar in whatever order desired.
+<img src="../images/setup_assistant/4.png" alt="Setup Assistant Screenshot" width="800px" />
+
+
+
+
+
+
+
 
 \section self_collisions Self-Collisions Screen
-Coming Soon
-<img width="800px" src="../images/setup_assistant/Screenshot-2.png" alt="Setup Assistant Screenshot" />
+The Default Self-Collision Matrix Generator will search for pairs of links on the robot that can safely be disabled from collision checking, decreasing motion planning processing time. These pairs of links are disabled when they are always in collision, never in collision, collision in the robot's default position and when the links are adjacent to each other on the kinematic chain. 
+
+<img src="../images/setup_assistant/5.png" alt="Setup Assistant Screenshot" width="800px" />
+
+<b>Sampling density</b> specifies how many random robot positions to check for self collision. Higher densities require more computation time while lower densities have a higher possibility of disabling pairs that should not be, or missing possible optimizations. The default value is 10,000 collision checks, which are done in parallel to decrease processing time.
+
+Clicking "Generate Collision Matrix" will begin the automatic optimization of your robot. 
+
+<img src="../images/setup_assistant/7.png" alt="Setup Assistant Screenshot" width="800px" />
+
+The results will show in the main table, where you can click on the rows to view highlighting of the disabled collision checking pairs. This table also allows you to override the default settings, in case you desire certain pairs of links to explicitly be checked, or not checked. You can view all n choose 2 pairs of links, whether they are disabled or not. 
+
+The possible reasons for disabled joints are the following:
+- Never
+- Default
+- Adjacent
+
 
 \section planning_groups Planning Groups Screen
-Coming Soon
-<img width="800px" src="../images/setup_assistant/Screenshot-3.png" alt="Setup Assistant Screenshot" />
-<img width="800px" src="../images/setup_assistant/Screenshot-4.png" alt="Setup Assistant Screenshot" />
-<img width="800px" src="../images/setup_assistant/Screenshot-5.png" alt="Setup Assistant Screenshot" />
+<img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
 
 \section robot_poses Robot Poses Screen
-Coming Soon
-<img width="800px" src="../images/setup_assistant/Screenshot-6.png" alt="Setup Assistant Screenshot" />
-<img width="800px" src="../images/setup_assistant/Screenshot-7.png" alt="Setup Assistant Screenshot" />
+<img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
+
 
 \section end_effectors End Effectors Screen
-Coming Soon
-<img width="800px" src="../images/setup_assistant/Screenshot-8.png" alt="Setup Assistant Screenshot" />
-<img width="800px" src="../images/setup_assistant/Screenshot-9.png" alt="Setup Assistant Screenshot" />
+<img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
+
 
 \section virtual_joints Virtual Joints Screen
-Coming Soon
-<img width="800px" src="../images/setup_assistant/Screenshot-10.png" alt="Setup Assistant Screenshot" />
-<img width="800px" src="../images/setup_assistant/Screenshot-11.png" alt="Setup Assistant Screenshot" />
+<img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
+
 
 \section configuration_files Configuration Files Screen
-Coming Soon
-<img width="800px" src="../images/setup_assistant/Screenshot-12.png" alt="Setup Assistant Screenshot" />
+<img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
+
 
 \section next_steps Next Steps
 Once you have generated you robot's MoveIt Configuration Package we can immediately test the result by running you robot within the MoveIt Visualizer. To do so, first build that package using the following command:
+
 
 \code
 rosmake moveit_ros
