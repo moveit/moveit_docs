@@ -91,28 +91,130 @@ Clicking "Generate Collision Matrix" will begin the automatic optimization of yo
 The results will show in the main table, where you can click on the rows to view highlighting of the disabled collision checking pairs. This table also allows you to override the default settings, in case you desire certain pairs of links to explicitly be checked, or not checked. You can view all n choose 2 pairs of links, whether they are disabled or not. 
 
 The possible reasons for disabled joints are the following:
-- Never
-- Default
-- Adjacent
+- <i>Never in Collision</i> - pair of links were never found to collide in the x number of samples taken
+- <i>Collision by Default</i> - pair of links were found to be in collision in the default position, which is either joint poision 0, or the average between the high and low joint limits
+- <i>Adjacent Links</i> - pair of links are adjacent in the kinematic tree
+- <i>Always in Collision</i> - pair of links were found to be in collision in all x number of samples taken
+- <i>User Disabled</i> - manually disabled pair by user
+
+The results of this screen will be saved at the last step of the SA, on the "Configuration Files" screen. At this screen all files and output will be generated at once into your configuration package. For now, continue to the next screen - "Planning Groups".
+
+
+
+
 
 
 \section planning_groups Planning Groups Screen
-<img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
+
+<img src="../images/setup_assistant/8.png" alt="Setup Assistant Screenshot" width="800px" />
+
+On this screen you can create, edit and remove planning groups for your robot. Planning groups are used for semantically describing different parts of your robot, such as defining what an arm is, or an end effector.
+
+\subsection create_group Create New Planning Group
+<img src="../images/setup_assistant/9.png" alt="Setup Assistant Screenshot" width="800px" />
+
+On the New Planning Group screen a unique name must be given for the group. 
+
+Optionally you can choose a kinematic solver for this planning group, if you have any kinematic plugins installed on your computer. By default you should have a KDL solver, which is a generic kinematic solver that works with most all robots. Much faster kinematic solvers exist.
+
+Optionally you can change teh kinematic search resolution, but the default 0.005 should be adequate. 
+
+Next, add components to the newly created planning group. 
+
+Planning Groups can consist of any of the following components:
+- <i>Joints</i> - connect links and constrain them to certain axis of rotations.
+- <i>Links</i> - links are the physical components of a robot
+- <i>Kinematic Chains</i> - a chain of connected links from a <i>tip</i> link to a <i>base</i> link. This is useful for things like defining arms.
+- <i>Subgroups</i> - define a group based on other previously defined groups. For instance, "arms" may contain the subgroups "left_arm" and "right_arm"
+
+\subsection demo1 Robonaut Demo: Create a left arm
+
+Name the new group 'left_arm' and choose any kinematic solver, or none. Click "Add Kinematic Chain".
+
+On the kinematics chain screen, navigate the tree menu until you find the "chest_base" link. Highlight this link and click "Choose Selected" to the right of the "Base Link" box, as shown in the following image:
+<img src="../images/setup_assistant/10.png" alt="Setup Assistant Screenshot" width="800px" />
+
+Next choose the tip link by further navigating into the robot links tree, selecting the link "left_wrist_yaw". Click the "Choose Selected" button to the right of the "Tip Link" box, as show in the following image:
+<img src="../images/setup_assistant/11.png" alt="Setup Assistant Screenshot" width="800px" />
+
+Click "Save" and then highlight the newly created group. You should see the whole arm highlight as in the following image:
+<img src="../images/setup_assistant/12.png" alt="Setup Assistant Screenshot" width="800px" />
+
+\subsection demo2 Robonaut Demo: Create a body group
+
+
+
+
+\n
+\n
+\n
+\n
+TO BE CONTINUED
+\n
+\n
+\n
+\n
+
+
+
 
 \section robot_poses Robot Poses Screen
 <img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
+
+
+
+
+
+
+
+
+
+
 
 
 \section end_effectors End Effectors Screen
 <img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
 
 
+
+
+
+
+
+
+
+
+
+
+
 \section virtual_joints Virtual Joints Screen
 <img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
 
 
+
+
+
+
+
+
+
+
+
 \section configuration_files Configuration Files Screen
 <img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section next_steps Next Steps
