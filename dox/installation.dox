@@ -38,7 +38,7 @@ You may want to source the setup.bash file at the bottom of your ~/.bashrc file 
 
 3. Install other dependencies:
 \code
-sudo apt-get install ros-fuerte-warehousewg ros-fuerte-control ros-fuerte-orocos-kinematics-dynamics ros-fuerte-robot-model ros-fuerte-pluginlib ros-fuerte-filters ros-fuerte-pcl ros-fuerte-dynamic-reconfigure
+sudo apt-get install ros-fuerte-warehousewg ros-fuerte-control ros-fuerte-orocos-kinematics-dynamics ros-fuerte-robot-model ros-fuerte-pluginlib ros-fuerte-filters ros-fuerte-pcl ros-fuerte-dynamic-reconfigure ros-fuerte-python-qt-binding ros-fuerte-laser-pipeline ros-fuerte-image-common
 \endcode
 
 4. Before Groovy, you also need to get rviz compiled from source.
