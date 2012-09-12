@@ -50,13 +50,22 @@ rosmake moveit_rviz_plugin
 rosmake pr2_arm_kinematics ompl_interface_ros planning_request_adapter_plugins
 \endcode
 
-7. Test the install with the PR2 in the MoveIt Visualizer:
+7. Next steps: \ref setup_assistant "Setup your robot with the Setup Assistant". Do this if you do not have config files or an SRDF. For the PR2, you can directly test the installation:
+
 \code
-roslaunch pr2_moveit_apps pr2_moveit_visualizer.launch
+roslaunch pr2_gazebo pr2_empty_world.launch
+roslaunch pr2_moveit_apps move_group.launch 
+roslaunch pr2_moveit_apps warehouse.launch moveit_warehouse_database_path:=~/testdb/
+roslaunch pr2_moveit_apps rviz.launch
 \endcode
 
-This will bring up the robot in planning space (i.e. not hooked up to the robot or simulator).  Things will look wonky until you drag the rviz display part out from the far left side of the window and change the Fixed Frame to 'odom_combined'.  You can play around with it there - be aware that the IK is a little wonky and you may need to drag it around for a while to get it to find valid poses.
+The first line will start the gazebo simulator. The simulator is not really needed (only publishing TF is sufficient).
+The second line starts the planning & execution pipeline from MoveIt.
+The third line starts MongoDB and the MoveIt warehouse, so that scenes and queries can be loaded and saved.
+The last line starts RViz with some ROS parameters. 
 
-8. Next steps: \ref setup_assistant "Setup your robot with the Setup Assistant"
+Once RViz starts, add the MotionPlanning plugin and start clicking around :)
+
 
 */
+
