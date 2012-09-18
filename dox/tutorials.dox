@@ -1,9 +1,9 @@
 /**
 \page tutorials Tutorials
 
-\section setup_assist Setup Assistant
-
-To setup any robot with a URDF (Universal Robot Description Format), run the \ref setup_assistant "Setup Assistant".
-
+- Setup Assistant
+  To setup any robot with a URDF (Universal Robot Description Format), run the \ref setup_assistant "Setup Assistant"
+- \ref rviz_plugin "RViz Plugin for MoveIt"
+.
 
 */
