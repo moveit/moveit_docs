@@ -582,8 +582,10 @@ WARN_LOGFILE           =
 # with spaces.
 
 INPUT                  = ./dox/ \
-                         ../moveit \
+                         ../moveit_core \
                          ../moveit_ros \
+                         ../moveit_perception \
+                         ../moveit_experimental \
                          ../moveit_manipulation \
                          ../moveit_pr2
 
