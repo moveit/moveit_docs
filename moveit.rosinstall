@@ -1,8 +1,8 @@
-- hg: {local-name: moveit, uri: 'https://kforge.ros.org/moveit/moveit', version: default}
-# - hg: {local-name: moveit_msgs, uri: 'https://kforge.ros.org/moveit/moveit_msgs', version: default}
-- hg: {local-name: moveit_ros, uri: 'https://kforge.ros.org/moveit/moveit_ros', version: default}
-- hg: {local-name: moveit_perception, uri: 'https://kforge.ros.org/moveit/moveit_perception', version: default}
-- hg: {local-name: moveit_manipulation, uri: 'https://kforge.ros.org/moveit/moveit_manipulation', version: default}
-- hg: {local-name: moveit_pr2, uri: 'https://kforge.ros.org/moveit/moveit_pr2', version: default}
-- hg: {local-name: moveit_docs, uri: 'https://kforge.ros.org/moveit/moveit_docs', version: default}
-
+- git: {local-name: moveit_core, uri: 'https://github.com/ros-planning/moveit-core.git', version: master}
+- git: {local-name: moveit_ros, uri: 'https://github.com/ros-planning/moveit-ros.git', version: master}
+# - git: {local-name: moveit_msgs, uri: 'https://github.com/ros-planning/moveit-msgs.git', version: master}
+- git: {local-name: moveit_perception, uri: 'https://github.com/ros-planning/moveit-perception.git', version: master}
+- git: {local-name: moveit_manipulation, uri: 'https://github.com/ros-planning/moveit-manipulation.git', version: master}
+- git: {local-name: moveit_experimental, uri: 'https://github.com/ros-planning/moveit-experimental.git', version: master}
+- git: {local-name: moveit_pr2, uri: 'https://github.com/ros-planning/moveit-pr2.git', version: master}
+- git: {local-name: moveit_docs, uri: 'https://github.com/ros-planning/moveit-docs.git', version: master}
