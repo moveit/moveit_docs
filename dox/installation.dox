@@ -1,21 +1,17 @@
 /**
-\page installation Install MoveIt
+\page installation Install MoveIt! from Source
 
-\section prereq Prerequisites
-This document assumes you are using ros-shadow-fixed as your source. To add this version remove the regular ROS package source using Synaptic and run the following command:
-\code
-sudo sh -c 'echo "deb http://packages.ros.org/ros-shadow-fixed/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
-\endcode
-
-Additionally, you need to have installed the tool <a href="http://www.ros.org/wiki/rosinstall">rosinstall</a>
+You need to have installed the tool <a href="http://www.ros.org/wiki/rosinstall">rosinstall</a>
 
 \section workspace_setup Workspace Setup
-Setup your tree to develop and use MoveIt on Fuerte:\n
 
-1. Install fuerte underlay from debs:
+1. Install dependencies from debs:
 \code
 sudo apt-get update
-sudo apt-get install ros-fuerte-moveit-core
+sudo apt-get install ros-groovy-warehouse-ros ros-groovy-control ros-groovy-kdl ros-groovy-robot-model \
+      ros-groovy-pluginlib ros-groovy-filters ros-groovy-vision-opencv  ros-groovy-pcl ros-groovy-dynamic-reconfigure \
+      ros-groovy-python-qt-binding ros-groovy-laser-pipeline ros-groovy-image-common ros-groovy-actionlib \
+      ros-groovy-xacro ros-groovy-pr2-common ros-groovy-fcl libogre-dev ros-groovy-qt-ros ros-groovy-rviz
 \endcode
 
 2. rosinstall everything:
@@ -23,29 +19,17 @@ sudo apt-get install ros-fuerte-moveit-core
 mkdir moveit
 cd moveit
 wget https://raw.github.com/ros-planning/moveit-docs/master/moveit.rosinstall
-rosinstall . /opt/ros/fuerte moveit.rosinstall
+rosinstall . /opt/ros/groovy moveit.rosinstall
 . setup.bash
 \endcode
 You may want to source the setup.bash file at the bottom of your ~/.bashrc file to set it up every time.
-
-3. Install other dependencies:
-\code
-sudo apt-get install ros-fuerte-warehousewg ros-fuerte-control ros-fuerte-orocos-kinematics-dynamics ros-fuerte-robot-model ros-fuerte-pluginlib ros-fuerte-filters ros-fuerte-pcl ros-fuerte-dynamic-reconfigure ros-fuerte-python-qt-binding ros-fuerte-laser-pipeline ros-fuerte-image-common
-\endcode
-
-4. Before Groovy, you also need to get rviz compiled from source.
-\code
-cd some_folder_in_your_ROS_package_path
-svn co https://code.ros.org/svn/ros-pkg/stacks/visualization/trunk/ visualization
-svn co https://code.ros.org/svn/ros-pkg/stacks/image_common/trunk/ image_common
-\endcode
 
 5. Build an example utility:
 \code
 rosmake moveit_rviz_plugin
 \endcode
 
-6. Build all plugins:
+6. Build some plugins:
 \code
 rosmake pr2_arm_kinematics ompl_interface_ros planning_request_adapter_plugins
 \endcode
@@ -56,7 +40,7 @@ rosmake pr2_arm_kinematics ompl_interface_ros planning_request_adapter_plugins
 roslaunch pr2_gazebo pr2_empty_world.launch
 roslaunch pr2_moveit_apps move_group.launch 
 roslaunch pr2_moveit_apps warehouse.launch moveit_warehouse_database_path:=~/testdb/
-roslaunch pr2_moveit_apps rviz.launch
+roslaunch pr2_moveit_apps moveit_rviz.launch
 \endcode
 
 The first line will start the gazebo simulator. The simulator is not really needed (only publishing TF is sufficient).

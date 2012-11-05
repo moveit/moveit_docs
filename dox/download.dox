@@ -1,11 +1,26 @@
 /**
 \page download Download
 
-\section latest_release MoveIt! for ROS Fuerte
+\section release_groovy MoveIt! for ROS Groovy
 
+MoveIt! is available as a number of Debian packages. To get a complete installation, please type the following command:
 \code
-sudo apt-get install ros-fuerte-moveit-all
+sudo apt-get install ros-groovy-moveit-ros ros-groovy-moveit-planners ros-groovy-moveit-setup-assistant
 \endcode
+
+The \em ros-groovy-moveit-ros deb is a meta-package that brings in all
+ROS-specific functionality of MoveIt, including planning, manipulation
+and visualization. \em moveit-ros-planners brings in all the planner plugins for ROS. One does not need all of these planners installed for MoveIt! to work. For example, installing just <a href="http://ompl.info">OMPL</a> planners is possible. \em ros-groovy-moveit-setup-assistant is optional and brings in the MoveIt! Setup Assistant.
+
+For the PR2, a pre-built configuration package is also available:
+\code
+sudo apt-get install ros-groovy-moveit-pr2
+\endcode
+
+\section release_fuerte MoveIt! for ROS Fuerte
+
+MoveIt! is available for ROS Fuerte only from source, however, there is no support for this version of ROS. Some of the dependencies are available as .deb files. 
+See the next section.
 
 \section source_code Source Code
 

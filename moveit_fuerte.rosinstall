@@ -1,0 +1,8 @@
+- git: {local-name: moveit_core, uri: 'https://github.com/ros-planning/moveit-core.git', version: fuerte-devel}
+- git: {local-name: moveit_planners, uri: 'https://github.com/ros-planning/moveit-planners.git', version: fuerte-devel}
+- git: {local-name: moveit_ros, uri: 'https://github.com/ros-planning/moveit-ros.git', version: fuerte-devel}
+- git: {local-name: moveit_setup_assistant, uri: 'https://github.com/ros-planning/moveit-setup-assistant.git', version: fuerte-devel}
+- git: {local-name: moveit_msgs, uri: 'https://github.com/ros-planning/moveit-msgs.git', version: fuerte-devel}
+- git: {local-name: moveit_experimental, uri: 'https://github.com/ros-planning/moveit-experimental.git', version: fuerte-devel}
+- git: {local-name: moveit_pr2, uri: 'https://github.com/ros-planning/moveit-pr2.git', version: fuerte-devel}
+- git: {local-name: moveit_docs, uri: 'https://github.com/ros-planning/moveit-docs.git', version: fuerte-devel}
