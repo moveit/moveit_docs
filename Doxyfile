@@ -584,6 +584,7 @@ WARN_LOGFILE           =
 INPUT                  = ./dox/ \
                          ../moveit_core \
                          ../moveit_ros \
+                         ../moveit_planners \
                          ../moveit_setup_assistant \
                          ../moveit_experimental \
                          ../moveit_pr2
