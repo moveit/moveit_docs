@@ -584,9 +584,8 @@ WARN_LOGFILE           =
 INPUT                  = ./dox/ \
                          ../moveit_core \
                          ../moveit_ros \
-                         ../moveit_perception \
+                         ../moveit_setup_assistant \
                          ../moveit_experimental \
-                         ../moveit_manipulation \
                          ../moveit_pr2
 
 # This tag can be used to specify the character encoding of the source files
@@ -666,7 +665,7 @@ EXAMPLE_RECURSIVE      = YES
 # directories that contain image that are included in the documentation (see
 # the \image command).
 
-IMAGE_PATH             =
+IMAGE_PATH             = ../moveit_core/kinematic_constraints/dox/img 
 
 # The INPUT_FILTER tag can be used to specify a program that doxygen should
 # invoke to filter for each input file. Doxygen will invoke the filter program
