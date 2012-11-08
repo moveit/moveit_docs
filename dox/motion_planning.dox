@@ -15,8 +15,5 @@ In conclusion, there are three possible methods for using motion planers in Move
 - via the planning_interface::Planner plugin. This approach is the most efficient one since there is no network communication involved. The planning_interface::Planner::solve() function takes a planning_scene::PlanningScene argument and a request message identical to the ones passed to the action and the service call. If the user needs to make changes to the planning scene before planning, the plugin approach is the recommended one. Please see the planning_scene_monitor::PlanningSceneMonitor class for how to maintain an up-to-date planning_scene::PlanningScene.
 
 
-\section benchmarking Benchmarking
-
-
 
 */
