@@ -5,7 +5,7 @@
 
 \page setup_assistant MoveIt Setup Assistant
 
-The MoveIt Setup Assistant is a graphical user interface for configuring any robot with a URDF to work with the MoveIt planning framework. Its primary function is generating Semantic Robot Description Format (<a href="http://www.ros.org/wiki/srdf">SRDF</a>) files and other necessary configuration files. It is the successor to the <a href="http://www.ros.org/wiki/arm_navigation/Tutorials/tools/Planning%20Description%20Configuration%20Wizard">Arm Navigation Wizard</a> and performs the following functions:
+The MoveIt Setup Assistant is a graphical user interface for configuring any robot with a <a href="http://www.ros.org/wiki/urdf">URDF</a> to work with the MoveIt planning framework. Its primary function is generating a Semantic Robot Description Format (<a href="http://www.ros.org/wiki/srdf">SRDF</a>) file for your robot. Additionally, it generates other necessary configuration files for use with the MoveIt pipeline. It is the successor to the <a href="http://www.ros.org/wiki/arm_navigation/Tutorials/tools/Planning%20Description%20Configuration%20Wizard">Arm Navigation Wizard</a> and performs the following functions:
 
 - Computes a self-collision matrix to reduce the amount of collision checking a robot performs on itself
 - Assists in creating planning groups, consisting of any combination of joints, links, kinematic chains and subgroups
@@ -42,7 +42,7 @@ rosrun moveit_setup_assistant setup_assistant
 
 \section start_screen Start Screen
 
-Once the MoveIt SA is loaded you should be presented with a screen that offers two choices: "Create New MoveIt Configuration Package" or "Exit Existing MoveIt Configuration Pacakge". These options are explained in the following two sections:
+Once the MoveIt SA is loaded you should be presented with a screen that offers two choices: "Create New MoveIt Configuration Package" or "Exit Existing MoveIt Configuration Package". These options are explained in the following two sections:
 
 \subsection new Create New MoveIt Configuration Package
 
@@ -56,7 +56,7 @@ rosrun xacro xacro.py YOUR_ROBOT.xacro > YOUR_ROBOT.urdf
 \endcode
 
 \n
-To choose your URDF, click the browse button and navigate to the location of your URDF file. Preferrably the SA is designed to have all URDFs located within a ROS package. In this convenstion said package is named something like <i>pr2_description</i>. But having the URDF located in a package is not required.
+To choose your URDF, click the browse button and navigate to the location of your URDF file. Preferably the SA is designed to have all URDFs located within a ROS package. In this convention said package is named something like <i>pr2_description</i>. Having the URDF located in a package is not required.
 
 <img src="../images/setup_assistant/3.png" alt="Setup Assistant Screenshot" width="800px" />
 
@@ -67,7 +67,7 @@ The second option is to load a configuration package that has already been creat
 
 \subsection done Load Files
 
-Once your options are selected, click the "Load Files" button at the bottom right and proceed using the left side navigation bar in whatever order desired.
+Once your options are selected, click the "Load Files" button at the bottom right and proceed to setup your robot using the left side navigation bar in whatever order desired.
 <img src="../images/setup_assistant/4.png" alt="Setup Assistant Screenshot" width="800px" />
 
 
@@ -82,17 +82,17 @@ The Default Self-Collision Matrix Generator will search for pairs of links on th
 
 <img src="../images/setup_assistant/5.png" alt="Setup Assistant Screenshot" width="800px" />
 
-<b>Sampling density</b> specifies how many random robot positions to check for self collision. Higher densities require more computation time while lower densities have a higher possibility of disabling pairs that should not be, or missing possible optimizations. The default value is 10,000 collision checks, which are done in parallel to decrease processing time.
+<b>Sampling density</b> specifies how many random robot positions to check for self collision. Higher densities require more computation time while lower densities have a higher possibility of disabling pairs that should not be, or missing possible optimizations. The default value is 10,000 collision checks. Collision checking is done in parallel to decrease processing time.
 
 Clicking "Generate Collision Matrix" will begin the automatic optimization of your robot. 
 
 <img src="../images/setup_assistant/7.png" alt="Setup Assistant Screenshot" width="800px" />
 
-The results will show in the main table, where you can click on the rows to view highlighting of the disabled collision checking pairs. This table also allows you to override the default settings, in case you desire certain pairs of links to explicitly be checked, or not checked. You can view all n choose 2 pairs of links, whether they are disabled or not. 
+The results will appear in the main table, where you can click on the rows to view highlighting of the disabled collision checking pairs. This table also allows you to override the default settings, in case you desire certain pairs of links to explicitly be checked, or not checked. You can view all n choose 2 pairs of links, whether they are disabled or not, by toggling the "Show Non-Disabled Link Pairs" checkbox.
 
-The possible reasons for disabled joints are the following:
+The possible reasons for joints being disabled are as follows:
 - <i>Never in Collision</i> - pair of links were never found to collide in the x number of samples taken
-- <i>Collision by Default</i> - pair of links were found to be in collision in the default position, which is either joint poision 0, or the average between the high and low joint limits
+- <i>Collision by Default</i> - pair of links were found to be in collision in the default position, which is either joint position 0, or the average between the high and low joint limits
 - <i>Adjacent Links</i> - pair of links are adjacent in the kinematic tree
 - <i>Always in Collision</i> - pair of links were found to be in collision in all x number of samples taken
 - <i>User Disabled</i> - manually disabled pair by user
@@ -113,11 +113,13 @@ On this screen you can create, edit and remove planning groups for your robot. P
 \subsection create_group Create New Planning Group
 <img src="../images/setup_assistant/9.png" alt="Setup Assistant Screenshot" width="800px" />
 
-On the New Planning Group screen a unique name must be given for the group. 
+Clicking "Add Group" will bring you to the New Planning Group screen.
 
-Optionally you can choose a kinematic solver for this planning group, if you have any kinematic plugins installed on your computer. By default you should have a KDL solver, which is a generic kinematic solver that works with most all robots. Much faster kinematic solvers exist.
+A unique name must be given for the group. 
 
-Optionally you can change teh kinematic search resolution, but the default 0.005 should be adequate. 
+Optionally, a kinematic solver can be specified for this planning group, if kinematic plugins are installed on the computer. By default you should have a KDL solver, which is a generic kinematic solver that works with most all robots. Much faster kinematic solvers exist.
+
+Optionally, you can change the kinematic search resolution, but the default 0.005 should be adequate. 
 
 Next, add components to the newly created planning group. 
 
@@ -129,41 +131,87 @@ Planning Groups can consist of any of the following components:
 
 \subsection demo1 Robonaut Demo: Create a left arm
 
-Name the new group 'left_arm' and choose any kinematic solver, or none. Click "Add Kinematic Chain".
+Create a new planning group and name it 'left_arm'. Choose any kinematic solver, or none. Then click "Save and Add Chain".
 
-On the kinematics chain screen, navigate the tree menu until you find the "chest_base" link. Highlight this link and click "Choose Selected" to the right of the "Base Link" box, as shown in the following image:
+A kinematic chain is simply a collection of links that are connected in sequential order in a kinematic tree, where no branches disrupt the chain. A kinematic chain is defined with a <i>base link</i> and a <i>tip link</i>
+<img src="../images/setup_assistant/chains.png" alt="Kinematic Chain Selection" width="400px" />
+
+On the kinematics chain screen, navigate the tree menu until you find the "chest_base" link. Highlight this link and click the "Choose Selected" button to the right of the "Base Link" box, as shown in the following image:
 <img src="../images/setup_assistant/10.png" alt="Setup Assistant Screenshot" width="800px" />
 
-Next choose the tip link by further navigating into the robot links tree, selecting the link "left_wrist_yaw". Click the "Choose Selected" button to the right of the "Tip Link" box, as show in the following image:
+Next, choose the tip link by further navigating into the robot links tree, selecting the link "left_wrist_yaw". Click the "Choose Selected" button to the right of the "Tip Link" box, as show in the following image:
 <img src="../images/setup_assistant/11.png" alt="Setup Assistant Screenshot" width="800px" />
 
-Click "Save" and then highlight the newly created group. You should see the whole arm highlight as in the following image:
+Click "Save", then highlight the newly created group. You should see the whole left arm highlight as in the following image:
 <img src="../images/setup_assistant/12.png" alt="Setup Assistant Screenshot" width="800px" />
 
 \subsection demo2 Robonaut Demo: Create a body group
 
+We will now demonstrate how to make a planning group that consists of individual joints. In the main Planning Groups screen, again click the "Add Group" button. Name the group "body". Set the solver to KDL and leave the resolution at its default value, as shown in the following image:
+<img src="../images/setup_assistant/13.png" alt="Setup Assistant Screenshot" width="800px" />
+
+Click "Save and Add Joints". Creating a group of joints is demonstrated in this diagram:
+
+<img src="../images/setup_assistant/groups.png" alt="Joint Group Selection" width="400px" />
+
+On the Joint Collection screen you should be presented with a double list box of available joints and selected joints. Select joints to be part of this planning group by highlighting one or more joints on the left list and clicking the right arrow button. To remove, highlight the joint in the right box and click the left arrow button.
+
+To select body joints for the robonaut demo, scroll through and add all joints whose name do not start with "left_" or "right_". This will add everything except the robot's arms. 
+
+<b>Tip:</b> To easily multi-select, click on the first joint you want to add then hold down shift while clicking on another joint. Or, hold the control key to select individual joints. You can use this technique for selecting links and subgroups as well.
+
+Your "body" planning group should look similar to this screenshot:
+<img src="../images/setup_assistant/14.png" alt="Setup Assistant Screenshot" width="800px" />
+
+Click "Save". Highlight the new "body" group and you should see the robot highlighted in red as in the next screenshot:
+
+<img src="../images/setup_assistant/15.png" alt="Setup Assistant Screenshot" width="800px" />
+
+\subsection demo3 Robonaut Demo: Create a group of groups
+
+Now we will great a planning group for the whole robot, minus the right arm because we have not created a group for that (but you easily could). This demo may have no particular usefulness, but demonstrates how a collection of subgroups can be combined into a master group.
+
+Click "Add Group", give it the name "whole_body" and then click the "Save and Add Subgroups" button.
+
+Choose both the subgroups in the left side box and move them to the right side "Selected Subgroups" box, as shown in the following screenshot:
+<img src="../images/setup_assistant/16.png" alt="Setup Assistant Screenshot" width="800px" /> 
+
+Click "Save".
+
+\subsection demo4 Robonaut Demo: Create a end effetor planning group
+
+Before we can define a semantic end effector for our robot on the "End Effectors" screen of the SA, we must first create a corresponding planning group.
+
+Create a new planning group and name it "left_gripper". Click "Save and Add Links" and on the links screen choose all the link names having to do with the robot hand. These links should all start with the world "link_" and be followed by "palm", "thumb", "index", etc. 
+
+Save the group and select the planning group in the main screen. You should see the whole end effector hand highlighted as in the following screenshot:
+<img src="../images/setup_assistant/17.png" alt="Setup Assistant Screenshot" width="800px" />
+
+We have now demonstrated the basic functionality for creating planning groups for a robot. Now when we want to do motion planning for the robot, we can easily tell MoveIt what parts of the robot to plan for. 
+
+Other things that should be mentioned are the ability to show or hide all components of the planning groups tree by click "Expand All" or "Collapse All", as well as the ability to edit a planning group by highlighting on the desired part that needs to be changed and clicking "Edit Selected". To completely delete a group, highlight the name of the planning group, click "Edit Selected" and find the "Delete" button at the bottom left. Beware that other deleting planning groups will also require that any corresponding poses or end effectors also be removed.
+
+Proceed to the "Robot Poses" screen using the left side navigation menu.
 
 
-
-\n
-\n
-\n
-\n
-TO BE CONTINUED
-\n
-\n
-\n
-\n
 
 
 
 
 \section robot_poses Robot Poses Screen
-<img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
 
 
+On this screen we can hard code collections of joint positions for the robot, or poses. This is useful for things like "default pose", "calibration pose", or fun things like a robot showing off.
 
+\subsection demo5 Robonaut Demo: Create a robot pose
 
+On the "Robot Poses" screen click "Add Pose". Name the pose "up_high" and from the drop-down menu choose the planning group "left_arm". At this point a list of slider controls should appear in the right hand box. Use the slider controls to adjust the join positions of each joint on the Robonaut, perhaps making it do something like in the following screenshot:
+<img src="../images/setup_assistant/19.png" alt="Setup Assistant Screenshot" width="800px" />
+
+When ready, click "Save" and you should see your new pose listed in the main window. Click on the pose to see the robot move into this position, and click "Show Default Pose" ot reset the robot. Your result should look similar to this screenshot:
+<img src="../images/setup_assistant/18.png" alt="Setup Assistant Screenshot" width="800px" />
+
+Additionally, you can edit, rename and delete poses using the bottom buttons. The "MoveIt" button is purely a fun feature that will "animate" your robot by cycling through all the poses you create on this screen.
 
 
 
@@ -173,11 +221,23 @@ TO BE CONTINUED
 
 
 \section end_effectors End Effectors Screen
-<img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
+
+Creating an end effector semantically labels the joints that are used in grasping, and aids the grasping pipeline in functionality. It should be noted that development still continues on this aspect of MoveIt, and additional configuration is probably needed before being able to actually grasp objects with your robot.
+
+<img src="../images/setup_assistant/20.png" alt="Setup Assistant Screenshot" width="800px" />
+
+\subsection demo6 Robonaut Demo: Define an end effector
+
+Click the "Add End Effector" button and name the end effector "left_hand". 
+
+The parent link is the link directly before the gripper links, typically the wrist of the robot. From the dropdown box select "left_wrist_yaw".
+
+The planning group defines the links and joints that make up this end effector. It must have been previously created on the "Planning Groups" screen. If it has not, click "Cancel" and create a corresponding planning group first. Otherwise, choose "left_gripper". Your screen should like similar to this one:
+
+<img src="../images/setup_assistant/22.png" alt="Setup Assistant Screenshot" width="800px" />
 
 
-
-
+Click "Save" and optionally repeat for the right end effector.
 
 
 
@@ -188,9 +248,28 @@ TO BE CONTINUED
 
 
 \section virtual_joints Virtual Joints Screen
-<img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
+A virtual joint defines the robots degrees of freedom with respect to the rest of the world. It is a link between a fixed external frame and the robot. Three types of joints exist:
+- <i>Planar</i> - the robot can move with respect to a plane, i.e. driving around on the floor
+- <i>Fixed</i> - the robot is considered stationary and its base is unable to move around
+- <i>Floating</i> - the robot has full degrees of freedom, i.e. a quadrocopter.
 
 
+\subsection demo7 Robonaut Demo: Define a virtual joint
+
+Click "Add Virtual Joint" and name the joint "virtual_joint". 
+
+Set the child link to the outermost link in your environment, in our case "world".
+
+Give the parent frame name an arbitrary name that describes it as a virual frame, for example "virtual_frame".
+
+Set the desired type of joint. Since the Robonaut currently has no mobile base and is only mounted to a pedestal, we can safely conclude that the joint is "fixed".
+
+Your setup should look like this:
+<img src="../images/setup_assistant/22.png" alt="Setup Assistant Screenshot" width="800px" />
+
+Click "Save". In most use cases you should only have one virtual joint, as in the following screenshot:
+
+<img src="../images/setup_assistant/23.png" alt="Setup Assistant Screenshot" width="800px" /> 
 
 
 
@@ -201,9 +280,18 @@ TO BE CONTINUED
 
 
 \section configuration_files Configuration Files Screen
-<img src="../images/setup_assistant/.png" alt="Setup Assistant Screenshot" width="800px" />
 
+On this screen everything that has been setup is saved to a configuration package. Until this step is finished, closing the SA will cause your unsaved changed to be lost.
 
+First, the location to save the package must be specified. If you are editing an existing package, leaving the default path is fine, the files will simply be over written where needed. Otherwise, click "Browse" and choose a new folder such as "~/ros/nasa_r2_moveit_config/"
+
+Your screen should looking similar to this:
+<img src="../images/setup_assistant/24.png" alt="Setup Assistant Screenshot" width="800px" />
+
+Now click "Generate Package" and if no issues or errors are found, you should be ready to use MoveIt!
+
+Notice that a list of all the generated folders and configuration files are listed for your convenience. Selecting individual file names provides a description of what each file does, as shown here:
+<img src="../images/setup_assistant/25.png" alt="Setup Assistant Screenshot" width="800px" />
 
 
 
@@ -218,19 +306,13 @@ TO BE CONTINUED
 
 
 \section next_steps Next Steps
-Once you have generated you robot's MoveIt Configuration Package we can immediately test the result by running you robot within the MoveIt Visualizer. To do so, first build that package using the following command:
+Once you have generated you robot's MoveIt Configuration Package, you can test the configuration by visualizing motion plans on it with the MoveIt Rviz Plugin:
 
+<a href="/rviz_plugin.html">MoveIt Rviz Plugin Tutorial</a>
 
-\code
-rosmake moveit_ros
-rosmake moveit_visualizer_ros
-rosmake pr2_moveit_apps
-\endcode
-
-Then run the visualizer for your robot, replacing "ROBOT_MOVEIT_CONFIG" with the MoveIt Configuration Package you just generated:
-
-\code
-roslaunch ROBOT_MOVEIT_CONFIG moveit_visualizer.launch
-\endcode
+\section questions Questions
+- For issues with documentation clarity of the MoveIt Setup Assistant, contact <a href="matilto:davetcoleman@gmail.com">Dave Coleman</a>. 
+- For Setup Assistant bugs please create an Issue on github: <a href="https://github.com/ros-planning/moveit-setup-assistant/issues">https://github.com/ros-planning/moveit-setup-assistant/issues</a>
+- For all other MoveIt issues please post questions on <a href="answers.ros.org">answers.ros.org</a>
 
 */

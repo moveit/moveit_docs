@@ -10,6 +10,7 @@
 
 h1 {
 	font-size: 150%;
+	margin-top:10px;
 }
 
 .title {
@@ -24,6 +25,7 @@ h2 {
 
 h3 {
 	font-size: 100%;
+	margin-top:20px;
 }
 
 dt {
@@ -138,7 +140,8 @@ dl.el {
 
 .fragment {
 	font-family: monospace, fixed;
-	font-size: 105%;
+	font-size: 95%;
+
 }
 
 pre.fragment {

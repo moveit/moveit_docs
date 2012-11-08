@@ -1,9 +1,8 @@
 /**
 \page tutorials Tutorials
 
-- Setup Assistant
-  To setup any robot with a URDF (Universal Robot Description Format), run the \ref setup_assistant "Setup Assistant"
-- \ref rviz_plugin "RViz Plugin for MoveIt"
+- \ref setup_assistant "MoveIt Setup Assistant" - setup any robot with a URDF to use MoveIt
+- \ref rviz_plugin "RViz Plugin for MoveIt" - visualize and test motion plans with Rviz
 .
 
 */
