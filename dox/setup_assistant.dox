@@ -249,18 +249,18 @@ Click "Save" and optionally repeat for the right end effector.
 
 \section virtual_joints Virtual Joints Screen
 A virtual joint defines the robots degrees of freedom with respect to the rest of the world. It is a link between a fixed external frame and the robot. Three types of joints exist:
-- <i>Planar</i> - the robot can move with respect to a plane, i.e. driving around on the floor
+- <i>Planar</i> - the robot can move with respect to a plane in 3 dimensions: x, y, and yaw. For example, driving around on the floor
 - <i>Fixed</i> - the robot is considered stationary and its base is unable to move around
-- <i>Floating</i> - the robot has full degrees of freedom, i.e. a quadrocopter.
+- <i>Floating</i> - the robot has a full 6 degrees of freedom, i.e. a quadrocopter.
 
 
 \subsection demo7 Robonaut Demo: Define a virtual joint
 
-Click "Add Virtual Joint" and name the joint "virtual_joint". 
+Click "Add Virtual Joint" and name the joint something like "virtual_joint". 
 
-Set the child link to the outermost link in your environment, in our case "world".
+The child link is the name of the link of your robot that moves with respect to the environment according to the type of the virtual joint, in our case "world".
 
-Give the parent frame name an arbitrary name that describes it as a virual frame, for example "virtual_frame".
+The parent frame is the name of the frame taht includes the robot's poision in the environment, for example "virtual_frame".
 
 Set the desired type of joint. Since the Robonaut currently has no mobile base and is only mounted to a pedestal, we can safely conclude that the joint is "fixed".
 
@@ -297,6 +297,16 @@ Notice that a list of all the generated folders and configuration files are list
 
 
 
+
+
+
+\section editing_existing Modifiy Your MoveIt Configuration Package
+
+If at some point in the future you need to update some of these MoveIt settings, you can easily re-launch the Setup Assistant with this robot's configuration files by running the setup_assistant.launch file located in the package you just created:
+
+\code
+roslaunch YOURROBOT_moveit_config setup_assistant.launch
+\endcode
 
 
 
