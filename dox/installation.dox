@@ -1,47 +1,47 @@
 /**
-\page installation Install MoveIt! from Source
+\page installation_source Install MoveIt! from Source
 
 You need to have installed the tool <a href="http://www.ros.org/wiki/rosinstall">rosinstall</a>
 
 \section workspace_setup Workspace Setup
 
 1. Install dependencies from debs:
-\code
+\verbatim
 sudo apt-get update
 sudo apt-get install ros-groovy-warehouse-ros ros-groovy-control ros-groovy-kdl ros-groovy-robot-model \
       ros-groovy-pluginlib ros-groovy-filters ros-groovy-vision-opencv  ros-groovy-pcl ros-groovy-dynamic-reconfigure \
       ros-groovy-python-qt-binding ros-groovy-laser-pipeline ros-groovy-image-common ros-groovy-actionlib \
       ros-groovy-xacro ros-groovy-pr2-common ros-groovy-fcl libogre-dev ros-groovy-qt-ros ros-groovy-rviz
-\endcode
+\endverbatim
 
 2. rosinstall everything:
-\code
+\verbatim
 mkdir moveit
 cd moveit
 wget https://raw.github.com/ros-planning/moveit-docs/master/moveit.rosinstall
 rosinstall . /opt/ros/groovy moveit.rosinstall
 . setup.bash
-\endcode
+\endverbatim
 You may want to source the setup.bash file at the bottom of your ~/.bashrc file to set it up every time.
 
 5. Build an example utility:
-\code
+\verbatim
 rosmake moveit_rviz_plugin
-\endcode
+\endverbatim
 
 6. Build some plugins:
-\code
+\verbatim
 rosmake pr2_arm_kinematics ompl_interface_ros planning_request_adapter_plugins
-\endcode
+\endverbatim
 
 7. Next steps: \ref setup_assistant "Setup your robot with the Setup Assistant". Do this if you do not have config files or an SRDF. For the PR2, you can directly test the installation:
 
-\code
+\verbatim
 roslaunch pr2_gazebo pr2_empty_world.launch
 roslaunch pr2_moveit_apps move_group.launch 
 roslaunch pr2_moveit_apps warehouse.launch moveit_warehouse_database_path:=~/testdb/
 roslaunch pr2_moveit_apps moveit_rviz.launch
-\endcode
+\endverbatim
 
 The first line will start the gazebo simulator. The simulator is not really needed (only publishing TF is sufficient).
 The second line starts the planning & execution pipeline from MoveIt.

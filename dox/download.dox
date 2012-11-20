@@ -1,26 +1,22 @@
 /**
 \page download Download
 
-\section release_groovy MoveIt! for ROS Groovy
+\section release_debian Debian packages for MoveIt! 
 
 MoveIt! is available as a number of Debian packages. To get a complete installation, please type the following command:
-\code
-sudo apt-get install ros-groovy-moveit-ros ros-groovy-moveit-planners ros-groovy-moveit-setup-assistant
-\endcode
+\verbatim
+sudo apt-get install ros-`rosversion -d`-moveit-full
+\endverbatim
 
-The \em ros-groovy-moveit-ros deb is a meta-package that brings in all
+The command above brings in a number of other packages: moveit-ros, moveit-planners, moveit-setup-assistant and moveit-commander.
+The \em ros-&lt;distro&gt;-moveit-ros deb is a meta-package that brings in all
 ROS-specific functionality of MoveIt, including planning, manipulation
-and visualization. \em moveit-ros-planners brings in all the planner plugins for ROS. One does not need all of these planners installed for MoveIt! to work. For example, installing just <a href="http://ompl.info">OMPL</a> planners is possible. \em ros-groovy-moveit-setup-assistant is optional and brings in the MoveIt! Setup Assistant.
+and visualization. \em moveit-planners brings in all the planner plugins for ROS. One does not need all of these planners installed for MoveIt! to work. For example, installing just <a href="http://ompl.info">OMPL</a> planners is possible. \em ros-&lt;distro&gt;-moveit-setup-assistant is optional and brings in the \ref moveit_setup_assistant. ros-&lt;distro&gt;-moveit-commander brings in Python interfaces for MoveIt and a command line tool.
 
 For the PR2, a pre-built configuration package is also available:
-\code
-sudo apt-get install ros-groovy-moveit-pr2
-\endcode
-
-\section release_fuerte MoveIt! for ROS Fuerte
-
-MoveIt! is available for ROS Fuerte only from source, however, there is no support for this version of ROS. Some of the dependencies are available as .deb files. 
-See the next section.
+\verbatim
+sudo apt-get install ros-`rosdistro -d`-moveit-full-pr2
+\endverbatim
 
 \section source_code Source Code
 

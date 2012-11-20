@@ -3,7 +3,7 @@
 <img src="../images/setup_assistant/setup_assistant_logo.png" alt="Setup Assistant Logo" style="float:right;margin-left:30px;" />
 \endhtmlonly
 
-\page setup_assistant MoveIt Setup Assistant
+\page moveit_setup_assistant MoveIt Setup Assistant
 
 The MoveIt Setup Assistant is a graphical user interface for configuring any robot with a <a href="http://www.ros.org/wiki/urdf">URDF</a> to work with the MoveIt planning framework. Its primary function is generating a Semantic Robot Description Format (<a href="http://www.ros.org/wiki/srdf">SRDF</a>) file for your robot. Additionally, it generates other necessary configuration files for use with the MoveIt pipeline. It is the successor to the <a href="http://www.ros.org/wiki/arm_navigation/Tutorials/tools/Planning%20Description%20Configuration%20Wizard">Arm Navigation Wizard</a> and performs the following functions:
 

@@ -586,7 +586,7 @@ INPUT                  = ./dox/ \
                          ../moveit_ros \
                          ../moveit_planners \
                          ../moveit_setup_assistant \
-                         ../moveit_experimental \
+                         ../moveit_commander \
                          ../moveit_pr2
 
 # This tag can be used to specify the character encoding of the source files

@@ -1,5 +1,5 @@
 /**
-\page rviz_plugin RViz Plugin for MoveIt!
+\page motion_planning_rviz_plugin RViz Plugin for MoveIt!
 
 \section rviz_plugin_overview Overview
 MoveIt! comes with an RViz plugin that can be used to compute motion plans, execute them, manage planning scenes, etc. The implementation of the plugin is in the @b moveit_rviz_plugin package, in the @b moveit_ros repository. The recommended installation procedure is to install the deb file for moveit_ros, although compilation from source is also possible.

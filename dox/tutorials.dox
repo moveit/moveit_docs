@@ -1,8 +1,8 @@
 /**
 \page tutorials Tutorials
 
-- \ref setup_assistant "MoveIt Setup Assistant" - setup any robot with a URDF to use MoveIt
-- \ref rviz_plugin "RViz Plugin for MoveIt" - visualize and test motion plans with Rviz
+- \ref moveit_setup_assistant "MoveIt Setup Assistant" - setup any robot with a URDF to use MoveIt
+- \ref motion_planning_rviz_plugin "RViz Plugin for MoveIt" - visualize and test motion plans with Rviz
 .
 
 */

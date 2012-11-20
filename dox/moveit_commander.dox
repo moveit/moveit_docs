@@ -1,0 +1,14 @@
+/**
+\page moveit_commander MoveIt! Commander
+
+This package contains Python API that makes the functionality MoveIt provides easy to use.
+Additionally, a simple command line tool is provided to send commands to the \ref move_group "move_group action".
+
+The following Python packages are available:
+- MoveGroupCommander
+- etc
+
+
+need py-generated docs here
+
+*/
