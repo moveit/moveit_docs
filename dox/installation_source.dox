@@ -19,19 +19,21 @@ wget https://raw.github.com/ros-planning/moveit-docs/master/moveit.rosinstall
 mkdir src
 rosinstall src/ /opt/ros/groovy moveit.rosinstall
 \endverbatim
-You may want to add the location moveit/ to ROS_PACKAGE_PATH.
 
 3. Build MoveIt:
 \verbatim
 # assuming we are in the moveit/ folder created above
 catkin_init_workspace
-mkdir build
-cd build
-cmake ..
-make
+catkin_make
 \endverbatim
 
-4. Next steps: \ref setup_assistant "Setup your robot with the Setup Assistant". Do this if you do not have config files or an SRDF. For the PR2, you can directly test the installation:
+4. Running things:
+\verbatim
+# assuming we are in the moveit/ folder created above
+source devel/setup.bash # or .zsh, depending on your shell
+\endverbatim
+
+5. Next steps: \ref moveit_setup_assistant "Setup your robot with the Setup Assistant". Do this if you do not have config files or an SRDF. For the PR2, you can directly test the installation:
 
 A simple demo:
 \verbatim
@@ -55,4 +57,3 @@ Once RViz starts, add the MotionPlanning plugin and start clicking around :)
 
 
 */
-
