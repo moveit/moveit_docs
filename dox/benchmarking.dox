@@ -1,5 +1,5 @@
 /**
-\page benchmarking Benchmarking Motion Planners
+\page moveit_benchmarking Benchmarking Motion Planners
 
 MoveIt! includes a number of \ref motion_planning "different planners" that all satisfy a \ref planning_plugin "common interface".
 Because of this, we can run different planners on the same problem scenario to compare performance.

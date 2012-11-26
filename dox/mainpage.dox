@@ -1,17 +1,11 @@
 /**
-\mainpage MoveIt! &mdash; A Planning Framework
+\mainpage MoveIt! &mdash; A Planning Framework (Alpha)
 
 @b MoveIt is an open source project that includes various planning and manipulation techniques, kinematics, dynamics, collision checking, constraints evaluation and sampling, visualization, etc. The entirety of the functionality MoveIt provides is robot agnostic. Where robot specific functionality is needed (such as interfacing with controllers) plugins are used.
 
 The functionality @b MoveIt includes is centered around planning and executing motion plans for different robots. For example, typical tasks MoveIt can be used for are planning reaching motions, picking up objects, transferring objects between specified locations. Tools for specification of motion plans, configuration and debugging tools, visualization tools, benchmarking are included. Various levels of abstraction for this functionlity are provided (C++ libraries, ROS interfaces, simplified Python API). MoveIt can be used as a robust platform for research and application development. 
 
 The MoveIt! mascot is \ref king_julien "King Julien".
-
-\htmlonly
-<div style="border:solid;border-width:1px;border-color:#FFCC00;background-color:#FFE680;padding:10px;margin-top:20px;font-size:16px;line-height:150%;">
-<b>Note:</b> <b>MoveIt!</b> is still under <i>heavy</i> development and is not ready for release. The first release is targeted for ROS Groovy. Use at your own risk.
-</div>
-\endhtmlonly
 
 \htmlonly
 <a href="../images/moveit_highlevel.png"><img style="float:right;margin:5px;" src="../images/moveit_highlevel_homepage.png"/></a>
@@ -33,7 +27,7 @@ For a quick visual diagram, see the \ref api_overview "MoveIt! API Overview"
 
 \section moveit_capabilities Capabilities of MoveIt!:
 - \ref motion_planning "Motion Planning"
-- \ref benchmarking "Benchmarking Planners"
+- \ref moveit_benchmarking "Benchmarking Planners"
 - \ref collision_checking "Collision Checking"
 - \ref constraint_representation "Constraint Representation and Evaluation"
 - \ref kinematics "Kinematics"

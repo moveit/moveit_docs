@@ -20,6 +20,6 @@ sudo apt-get install ros-`rosdistro -d`-moveit-full-pr2
 
 \section source_code Source Code
 
-\ref installation "Instructions for installing from source"
+\ref installation_source "Instructions for installing from source"
 
 */
