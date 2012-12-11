@@ -38,7 +38,8 @@ source devel/setup.bash # or .zsh, depending on your shell
 A simple demo:
 \verbatim
 roslaunch pr2_moveit_config demo.launch
-\endverbatim 
+\endverbatim
+*Note*: for this demo you need the [joint_state_publisher](http://www.ros.org/wiki/joint_state_publisher) which has been catkinized [here](https://github.com/davetcoleman/joint_state_publisher).
 
 A more complex demo:
 \verbatim
