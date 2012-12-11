@@ -26,7 +26,7 @@ rosmake moveit_setup_assistant
 
 To start the Setup Assistant simply run the command:
 \code
-rosrun moveit_setup_assistant setup_assistant
+rosrun moveit_setup_assistant moveit_setup_assistant
 \endcode
 
 
@@ -42,7 +42,7 @@ rosrun moveit_setup_assistant setup_assistant
 
 \section start_screen Start Screen
 
-Once the MoveIt SA is loaded you should be presented with a screen that offers two choices: "Create New MoveIt Configuration Package" or "Exit Existing MoveIt Configuration Package". These options are explained in the following two sections:
+Once the SA is loaded you should be presented with a screen that offers two choices: "Create New MoveIt Configuration Package" or "Exit Existing MoveIt Configuration Package". These options are explained in the following two sections:
 
 \subsection new Create New MoveIt Configuration Package
 
