@@ -318,7 +318,7 @@ roslaunch YOURROBOT_moveit_config setup_assistant.launch
 \section next_steps Next Steps
 Once you have generated you robot's MoveIt Configuration Package, you can test the configuration by visualizing motion plans on it with the MoveIt Rviz Plugin:
 
-<a href="/rviz_plugin.html">MoveIt Rviz Plugin Tutorial</a>
+<a href="motion_planning_rviz_plugin.html">MoveIt Rviz Plugin Tutorial</a>
 
 \section questions Questions
 - For issues with documentation clarity of the MoveIt Setup Assistant, contact <a href="matilto:davetcoleman@gmail.com">Dave Coleman</a>. 

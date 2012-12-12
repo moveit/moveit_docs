@@ -15,17 +15,17 @@ roslaunch pr2_gazebo pr2_empty_world.launch
 
 The RViz plugin uses an action interface to the \ref move_group "move_group node", so we should start that node as well, unless it is already started. You can use: \code rosnode list | grep move_group \endcode to check whether the node is running or not. To start it, use:
 \code
-roslaunch pr2_moveit_apps move_group.launch 
+roslaunch pr2_moveit_config move_group.launch 
 \endcode
 
 To save planning scenes the RViz plugin connects to a database, so starting a warehouse server is also needed. The launch file is configured to take as argument the path to the directory where the database is saved (using MongoDB). If the database is not started the plugin will still work but saving and loading scenes will not be possible.
 \code
-roslaunch pr2_moveit_apps warehouse.launch moveit_warehouse_database_path:=~/moveit_db/
+roslaunch pr2_moveit_config warehouse.launch moveit_warehouse_database_path:=~/moveit_db/
 \endcode
 
 Finally, we can start RViz. For interactive markers to work however, we need to perform inverse kinematics. For this reason, pr2_moveit_config/config/kinematics.yaml needs to be loaded in the local namespace of the rviz node. A launch file that does this is provided as well:
 \code
-roslaunch pr2_moveit_apps rviz.launch
+roslaunch pr2_moveit_config moveit_rviz.launch
 \endcode
 
 At this point we should see the usual RViz window. Next, the "MotionPlanning" display needs to be added. A window that looks like this should appear:
