@@ -298,9 +298,9 @@ Click "Save" and optionally repeat for the right end effector.
 
 
 \section passive_joints Passive Joints Screen
-This is a new screen: TODO
+Passive joints are joints in your robot's URDF for which joint values are not expected to ever be published. These are usually not actuated and are without encoders.
 
-
+Select any passive joints your robot may have and move them to the right column.
 
 
 
