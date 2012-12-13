@@ -17,6 +17,7 @@ The MoveIt Setup Assistant is a graphical user interface for configuring any rob
 
 In this documentation we will step through setting up MoveIt with NASA's Robonaut using their freely available URDF found in their <a href="http://ros.org/wiki/nasa_r2_common">nasa_r2_common</a> package. During this tutorial we will document the Setup Assistant (SA) and its workings.
 
+
 \section getting_started Setup and Run
 
 \ref installation "Install" MoveIt, then run the command:
@@ -35,6 +36,16 @@ rosrun moveit_setup_assistant moveit_setup_assistant
 
 
 
+
+\htmlonly
+<br />
+<br />
+<br />
+<br />
+<div style="border:solid;border-width:1px;border-color:#FFCC00;background-color:#FFE680;padding:10px;margin:10px;font-size:12px;line-height:150%;">
+<b>Note:</b> Images are out of date and will be updated shortly, but documentation should still be accurate
+</div>
+\endhtmlonly
 
 
 
@@ -57,6 +68,16 @@ rosrun xacro xacro.py YOUR_ROBOT.xacro > YOUR_ROBOT.urdf
 
 \n
 To choose your URDF, click the browse button and navigate to the location of your URDF file. Preferably the SA is designed to have all URDFs located within a ROS package. In this convention said package is named something like <i>pr2_description</i>. Having the URDF located in a package is not required.
+
+\subsection demo00 Robonaut Demo: Load the robonaut
+
+To download the robotnaut URDF, download the repository into your ROS workspace:
+\code
+roscd
+git clone https://bitbucket.org/nasa_ros_pkg/nasa_r2_common
+\endcode
+
+Click the "Browse" button on the Start screen and navigate to nasa_r2_common/r2_description/robots. Choose the file r2.urdf.xml as pictured. You may have to first generate the xml file from xacro using the command discussed above.
 
 <img src="../images/setup_assistant/3.png" alt="Setup Assistant Screenshot" width="800px" />
 
@@ -98,6 +119,36 @@ The possible reasons for joints being disabled are as follows:
 - <i>User Disabled</i> - manually disabled pair by user
 
 The results of this screen will be saved at the last step of the SA, on the "Configuration Files" screen. At this screen all files and output will be generated at once into your configuration package. For now, continue to the next screen - "Planning Groups".
+
+
+
+
+
+
+\section virtual_joints Virtual Joints Screen
+A virtual joint defines the robots degrees of freedom with respect to the rest of the world. It is a link between a fixed external frame and the robot. Three types of joints exist:
+- <i>Planar</i> - the robot can move with respect to a plane in 3 dimensions: x, y, and yaw. For example, driving around on the floor
+- <i>Fixed</i> - the robot is considered stationary and its base is unable to move around
+- <i>Floating</i> - the robot has a full 6 degrees of freedom, i.e. a quadrocopter.
+
+
+\subsection demo7 Robonaut Demo: Define a virtual joint
+
+Click "Add Virtual Joint" and name the joint something like "virtual_joint". 
+
+The child link is the name of the link of your robot that moves with respect to the environment according to the type of the virtual joint, in our case "world".
+
+The parent frame is the name of the frame taht includes the robot's poision in the environment, for example "virtual_frame".
+
+Set the desired type of joint. Since the Robonaut currently has no mobile base and is only mounted to a pedestal, we can safely conclude that the joint is "fixed".
+
+Your setup should look like this:
+<img src="../images/setup_assistant/22.png" alt="Setup Assistant Screenshot" width="800px" />
+
+Click "Save". In most use cases you should only have one virtual joint, as in the following screenshot:
+
+<img src="../images/setup_assistant/23.png" alt="Setup Assistant Screenshot" width="800px" /> 
+
 
 
 
@@ -228,13 +279,17 @@ Creating an end effector semantically labels the joints that are used in graspin
 
 \subsection demo6 Robonaut Demo: Define an end effector
 
-Click the "Add End Effector" button and name the end effector "left_hand". 
+Click the "Add End Effector" button and fill in the "End Effector Name" with "left_hand". 
 
-The parent link is the link directly before the gripper links, typically the wrist of the robot. From the dropdown box select "left_wrist_yaw".
+The "End Effector Group" defines the links and joints that make up this end effector. It must have been previously created on the "Planning Groups" screen. If it has not, click "Cancel" and create a corresponding planning group first. Otherwise, choose "left_gripper". 
 
-The planning group defines the links and joints that make up this end effector. It must have been previously created on the "Planning Groups" screen. If it has not, click "Cancel" and create a corresponding planning group first. Otherwise, choose "left_gripper". Your screen should like similar to this one:
+The "Parent Link" is the link directly before the gripper links, typically the wrist of the robot. This would be the last link in the arm chain, e.g. the 'tip' link of the arm. From the dropdown box select "left_wrist_yaw".
 
-<img src="../images/setup_assistant/22.png" alt="Setup Assistant Screenshot" width="800px" />
+The "Parent Group" is the planning group that defines the arm of the robot. Choose "left_arm".
+
+It is important you have the correct links chosen between your arm and your end effector, otherwise downstream MoveIt software may have issues controlling your end effector. Your screen should look similar to this:
+
+<img src="../images/setup_assistant/21.png" alt="Setup Assistant Screenshot" width="800px" />
 
 
 Click "Save" and optionally repeat for the right end effector.
@@ -242,34 +297,9 @@ Click "Save" and optionally repeat for the right end effector.
 
 
 
+\section passive_joints Passive Joints Screen
+This is a new screen: TODO
 
-
-
-
-
-\section virtual_joints Virtual Joints Screen
-A virtual joint defines the robots degrees of freedom with respect to the rest of the world. It is a link between a fixed external frame and the robot. Three types of joints exist:
-- <i>Planar</i> - the robot can move with respect to a plane in 3 dimensions: x, y, and yaw. For example, driving around on the floor
-- <i>Fixed</i> - the robot is considered stationary and its base is unable to move around
-- <i>Floating</i> - the robot has a full 6 degrees of freedom, i.e. a quadrocopter.
-
-
-\subsection demo7 Robonaut Demo: Define a virtual joint
-
-Click "Add Virtual Joint" and name the joint something like "virtual_joint". 
-
-The child link is the name of the link of your robot that moves with respect to the environment according to the type of the virtual joint, in our case "world".
-
-The parent frame is the name of the frame taht includes the robot's poision in the environment, for example "virtual_frame".
-
-Set the desired type of joint. Since the Robonaut currently has no mobile base and is only mounted to a pedestal, we can safely conclude that the joint is "fixed".
-
-Your setup should look like this:
-<img src="../images/setup_assistant/22.png" alt="Setup Assistant Screenshot" width="800px" />
-
-Click "Save". In most use cases you should only have one virtual joint, as in the following screenshot:
-
-<img src="../images/setup_assistant/23.png" alt="Setup Assistant Screenshot" width="800px" /> 
 
 
 
