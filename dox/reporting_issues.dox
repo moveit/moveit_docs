@@ -1,13 +1,13 @@
 /** \page reporting_issues Reporting Issues
 
 There are several MoveIt! issue trackers on Github, each of different components of MoveIt:
-- <a href="https://github.com/ros-planning/moveit-msgs/issues">Issues with ROS messages for MoveIt</a>
-- <a href="https://github.com/ros-planning/moveit-planners/issues">Issues with planning plugins</a>
-- <a href="https://github.com/ros-planning/moveit-core/issues">Issues with Core components of MoveIt</a>
-- <a href="https://github.com/ros-planning/moveit-ros/issues">Issues with ROS components of MoveIt</a>
-- <a href="https://github.com/ros-planning/moveit-commander/issues">Issues with the MoveIt Commander</a>
-- <a href="https://github.com/ros-planning/moveit-setup-assistant/issues">Issues with the MoveIt Setup Assistant</a>
-- <a href="https://github.com/ros-planning/moveit-pr2/issues">Issues with using MoveIt on the PR2</a>
+- <a href="https://github.com/ros-planning/moveit_msgs/issues">Issues with ROS messages for MoveIt</a>
+- <a href="https://github.com/ros-planning/moveit_planners/issues">Issues with planning plugins</a>
+- <a href="https://github.com/ros-planning/moveit_core/issues">Issues with Core components of MoveIt</a>
+- <a href="https://github.com/ros-planning/moveit_ros/issues">Issues with ROS components of MoveIt</a>
+- <a href="https://github.com/ros-planning/moveit_commander/issues">Issues with the MoveIt Commander</a>
+- <a href="https://github.com/ros-planning/moveit_setup_assistant/issues">Issues with the MoveIt Setup Assistant</a>
+- <a href="https://github.com/ros-planning/moveit_pr2/issues">Issues with using MoveIt on the PR2</a>
 .
 
 */
