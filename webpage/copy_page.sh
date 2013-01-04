@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEST=/var/www/moveit/
+DEST=/var/www/moveit/doxygen/
 SOURCE=webpage
 
 echo "Exporting MoveIt! documentation to $DEST ..."
