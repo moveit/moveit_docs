@@ -352,7 +352,7 @@ Once you have generated you robot's MoveIt Configuration Package, you can test t
 
 \section questions Questions
 - For issues with documentation clarity of the MoveIt Setup Assistant, contact <a href="matilto:davetcoleman@gmail.com">Dave Coleman</a>. 
-- For Setup Assistant bugs please create an Issue on github: <a href="https://github.com/ros-planning/moveit-setup-assistant/issues">https://github.com/ros-planning/moveit-setup-assistant/issues</a>
+- For Setup Assistant bugs please create an Issue on github: <a href="https://github.com/ros-planning/moveit_setup_assistant/issues">https://github.com/ros-planning/moveit_setup_assistant/issues</a>
 - For all other MoveIt issues please post questions on <a href="answers.ros.org">answers.ros.org</a>
 
 */

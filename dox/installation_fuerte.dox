@@ -22,7 +22,7 @@ sudo apt-get install ros-fuerte-moveit-core
 \code
 mkdir moveit
 cd moveit
-wget https://raw.github.com/ros-planning/moveit-docs/master/moveit_fuerte.rosinstall
+wget https://raw.github.com/ros-planning/moveit_docs/master/moveit_fuerte.rosinstall
 rosinstall . /opt/ros/fuerte moveit_fuerte.rosinstall
 . setup.bash
 \endcode

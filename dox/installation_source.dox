@@ -15,7 +15,7 @@ sudo apt-get install ros-groovy-moveit-source-build-deps
 \verbatim
 mkdir moveit
 cd moveit
-wget https://raw.github.com/ros-planning/moveit-docs/master/moveit.rosinstall
+wget https://raw.github.com/ros-planning/moveit_docs/master/moveit.rosinstall
 mkdir src
 rosinstall src/ /opt/ros/groovy moveit.rosinstall
 \endverbatim
