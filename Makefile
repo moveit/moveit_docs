@@ -1,18 +1,20 @@
 DOXYFILE=Doxyfile
 DOXYGEN=doxygen
-DEST=/var/www/moveit/
 SOURCE=webpage
 
 all:	doc
 
 doc:	$(DOXYFILE)
-	rm -rf webpage/generated
+	rm -rf $(SOURCE)/generated
 	$(DOXYGEN) $(DOXYFILE)
 
-page:	doc
-	cd webpage && ./copy_page.sh
+groovy:	doc
+	cd $(SOURCE) && ./copy_page.sh groovy
+
+hydro:	doc
+	cd $(SOURCE) && ./copy_page.sh groovy
 
 clean:
-	rm -rf webpage/generated
+	rm -rf $(SOURCE)/generated
 
 .PHONY:	doc
