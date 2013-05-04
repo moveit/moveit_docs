@@ -1,48 +1,8 @@
 /**
-\mainpage MoveIt! &mdash; A Planning Framework (Alpha)
-
-@b MoveIt is an open source project that includes various planning and manipulation techniques, kinematics, dynamics, collision checking, constraints evaluation and sampling, visualization, etc. The entirety of the functionality MoveIt provides is robot agnostic. Where robot specific functionality is needed (such as interfacing with controllers) plugins are used.
-
-The functionality @b MoveIt includes is centered around planning and executing motion plans for different robots. For example, typical tasks MoveIt can be used for are planning reaching motions, picking up objects, transferring objects between specified locations. Tools for specification of motion plans, configuration and debugging tools, visualization tools, benchmarking are included. Various levels of abstraction for this functionlity are provided (C++ libraries, ROS interfaces, simplified Python API). MoveIt can be used as a robust platform for research and application development. 
-
-The MoveIt! mascot is \ref king_julien "King Julien".
+\mainpage MoveIt! &mdash; Doxyge API
 
 \htmlonly
-<a href="../images/moveit_highlevel.png"><img style="float:right;margin:5px;" src="../images/moveit_highlevel_homepage.png"/></a>
+<a href="../images/logo.png"><img style="float:right;margin:5px;" src="../images/logo.png"/></a>
 \endhtmlonly
-
-\section moveit_packages MoveIt Packages:
-- \ref moveit_msgs "Moveit! Messages". The set of ROS messages used throughout MoveIt.
-- \ref moveit_core "MoveIt! Core". A set of C++ libraries that have few dependencies and do not depend on the ROS communication mechanism. However, ROS messages are used throughout these libraries.
-- \ref moveit_ros "MoveIt! ROS". A collection of packages that include ROS communication. This functionality builds upon the libraries in \ref moveit_core "MoveIt! Core".
-- \ref moveit_planners "MoveIt! Planners". MoveIt itself is not specific to a particular type of planning algorithms. The MoveIt! Planners package provides plugins that offer planning functionality for MoveIt. At least one planning plugin must be installed for planning functionality to be available.
-- \ref moveit_commander "MoveIt! Commander". This is a package that sits on top of most functionality provided by the other packages and offers simple to use interfaces using Python bindings.
-- \ref moveit_setup_assistant "MoveIt! Setup Assistant". This is a graphical tool that can be used to generate configurations for various robots, starting  only with the robot's <a href="http://ros.org/wiki/urdf">URDF</a>.
-
-\par
-MoveIt! does not contain any robot specific settings or launch files. For convenience, the \ref moveit_pr2 "MoveIt! PR2" component is provided  to make it simpler to use MoveIt! with the PR2. However, a separate component for configuring each new robot using MoveIt! is not required, and the robot specific settings should be generated using the  \ref moveit_setup_assistant "MoveIt! Setup Assistant".
-
-\par
-For a quick visual diagram, see the \ref api_overview "MoveIt! API Overview"
-
-\section moveit_capabilities Capabilities of MoveIt!:
-- \ref motion_planning "Motion Planning"
-- \ref moveit_benchmarking "Benchmarking Planners"
-- \ref collision_checking "Collision Checking"
-- \ref constraint_representation "Constraint Representation and Evaluation"
-- \ref kinematics "Kinematics"
-- \ref dynamics_solver "Dynamics"
-- \ref trajectory_execution "Trajectory Execution"
-- \ref motion_planning_rviz_plugin "Visualization"
-- \ref moveit_setup_assistant "Automatic Configuration"
-.
-
-\section mainpage_quick_links Quick Links:
-
-MoveIt is available for \ref installation_source "download on Github" and as Debian packages on the <a href="http://www.ros.org/wiki/groovy/Installation/Ubuntu">Willow Garage ROS repositories</a>.
-- \ref download "Download MoveIt!"
-- \ref tutorials "Tutorials"
-
-.
 
 */
