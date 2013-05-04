@@ -1,8 +1,10 @@
 /**
-\mainpage MoveIt! &mdash; Doxyge API
+\mainpage MoveIt! &mdash; Doxygen API
+
+<br>
 
 \htmlonly
-<a href="../images/logo.png"><img style="float:right;margin:5px;" src="../images/logo.png"/></a>
+<img style="float:left;margin:5px;" src="../images/logo.png"/>
 \endhtmlonly
 
 */
