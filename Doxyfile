@@ -587,7 +587,8 @@ INPUT                  = ./dox/ \
                          ../moveit_planners \
                          ../moveit_setup_assistant \
                          ../moveit_commander \
-                         ../moveit_pr2
+                         ../moveit_pr2 \
+                         ../geometric_shapes
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding, which is
