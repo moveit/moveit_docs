@@ -12,7 +12,7 @@ groovy:	doc
 	cd $(SOURCE) && ./copy_page.sh groovy
 
 hydro:	doc
-	cd $(SOURCE) && ./copy_page.sh groovy
+	cd $(SOURCE) && ./copy_page.sh hydro
 
 page:	groovy
 
