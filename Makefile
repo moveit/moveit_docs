@@ -7,6 +7,7 @@ all:	doc
 doc:	$(DOXYFILE)
 	rm -rf $(SOURCE)/generated
 	$(DOXYGEN) $(DOXYFILE)
+	$(SOURCE)/mkdocs.sh $(SOURCE)/generated
 
 groovy:	doc
 	cd $(SOURCE) && ./copy_page.sh groovy
