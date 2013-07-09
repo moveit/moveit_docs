@@ -1,6 +1,6 @@
 !function ($) {
-    $('#moveitCarousel').carousel()
-    $('#moveitCarousel').hover(function () {
+    $('#omplCarousel').carousel()
+    $('#omplCarousel').hover(function () {
       $(this).carousel('pause')
     }, function () {
       $(this).carousel('cycle')
