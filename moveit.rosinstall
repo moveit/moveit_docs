@@ -1,10 +1,10 @@
-- git: {local-name: moveit_core, uri: 'https://github.com/ros-planning/moveit_core.git'}
-- git: {local-name: moveit_planners, uri: 'https://github.com/ros-planning/moveit_planners.git'}
-- git: {local-name: moveit_ros, uri: 'https://github.com/ros-planning/moveit_ros.git'}
-- git: {local-name: moveit_setup_assistant, uri: 'https://github.com/ros-planning/moveit_setup_assistant.git'}
-- git: {local-name: moveit_msgs, uri: 'https://github.com/ros-planning/moveit_msgs.git'}
-- git: {local-name: moveit_pr2, uri: 'https://github.com/ros-planning/moveit_pr2.git'}
-- git: {local-name: moveit_commander, uri: 'https://github.com/ros-planning/moveit_commander.git'}
-- git: {local-name: moveit_resources, uri: 'https://github.com/ros-planning/moveit_resources.git'}
-- git: {local-name: moveit_docs, uri: 'https://github.com/ros-planning/moveit_docs.git'}
-- git: {local-name: geometric_shapes, uri: 'https://github.com/ros-planning/geometric_shapes.git'}
+- git: {local-name: moveit_core, uri: 'https://github.com/ros-planning/moveit_core.git', version: groovy-devel}
+- git: {local-name: moveit_planners, uri: 'https://github.com/ros-planning/moveit_planners.git', version: groovy-devel}
+- git: {local-name: moveit_ros, uri: 'https://github.com/ros-planning/moveit_ros.git', version: groovy-devel}
+- git: {local-name: moveit_setup_assistant, uri: 'https://github.com/ros-planning/moveit_setup_assistant.git', version: groovy-devel}
+- git: {local-name: moveit_msgs, uri: 'https://github.com/ros-planning/moveit_msgs.git', version: groovy-devel}
+- git: {local-name: moveit_pr2, uri: 'https://github.com/ros-planning/moveit_pr2.git', version: groovy-devel}
+- git: {local-name: moveit_commander, uri: 'https://github.com/ros-planning/moveit_commander.git', version: groovy-devel}
+- git: {local-name: moveit_resources, uri: 'https://github.com/ros-planning/moveit_resources.git', version: master}
+- git: {local-name: moveit_docs, uri: 'https://github.com/ros-planning/moveit_docs.git', version: groovy-devel}
+- git: {local-name: geometric_shapes, uri: 'https://github.com/ros-planning/geometric_shapes.git', version: groovy-devel}
