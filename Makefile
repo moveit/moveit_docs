@@ -15,7 +15,7 @@ groovy:	doc
 hydro:	doc
 	cd $(SOURCE) && ./copy_page.sh hydro
 
-page:	groovy
+page:	hydro
 
 clean:
 	rm -rf $(SOURCE)/generated
