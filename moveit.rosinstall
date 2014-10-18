@@ -1,10 +1,10 @@
-- git: {local-name: moveit_core, uri: 'https://github.com/ros-planning/moveit_core.git', version: hydro-devel}
-- git: {local-name: moveit_planners, uri: 'https://github.com/ros-planning/moveit_planners.git', version: hydro-devel}
-- git: {local-name: moveit_ros, uri: 'https://github.com/ros-planning/moveit_ros.git', version: hydro-devel}
-- git: {local-name: moveit_setup_assistant, uri: 'https://github.com/ros-planning/moveit_setup_assistant.git', version: hydro-devel}
+- git: {local-name: moveit_core, uri: 'https://github.com/ros-planning/moveit_core.git', version: indigo-devel}
+- git: {local-name: moveit_planners, uri: 'https://github.com/ros-planning/moveit_planners.git', version: indigo-devel}
+- git: {local-name: moveit_ros, uri: 'https://github.com/ros-planning/moveit_ros.git', version: indigo-devel}
+- git: {local-name: moveit_setup_assistant, uri: 'https://github.com/ros-planning/moveit_setup_assistant.git', version: indigo-devel}
 - git: {local-name: moveit_msgs, uri: 'https://github.com/ros-planning/moveit_msgs.git', version: hydro-devel}
 - git: {local-name: moveit_plugins, uri: 'https://github.com/ros-planning/moveit_plugins.git', version: hydro-devel}
 - git: {local-name: moveit_pr2, uri: 'https://github.com/ros-planning/moveit_pr2.git', version: hydro-devel}
 - git: {local-name: moveit_commander, uri: 'https://github.com/ros-planning/moveit_commander.git', version: hydro-devel}
 - git: {local-name: moveit_resources, uri: 'https://github.com/ros-planning/moveit_resources.git', version: master}
-- git: {local-name: moveit_docs, uri: 'https://github.com/ros-planning/moveit_docs.git', version: hydro-devel}
+- git: {local-name: moveit_docs, uri: 'https://github.com/ros-planning/moveit_docs.git', version: indigo-devel}
