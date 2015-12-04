@@ -2,7 +2,7 @@
 - git: {local-name: moveit_planners, uri: 'https://github.com/ros-planning/moveit_planners.git', version: indigo-devel}
 - git: {local-name: moveit_ros, uri: 'https://github.com/ros-planning/moveit_ros.git', version: jade-devel}
 - git: {local-name: moveit_setup_assistant, uri: 'https://github.com/ros-planning/moveit_setup_assistant.git', version: indigo-devel}
-- git: {local-name: moveit_msgs, uri: 'https://github.com/ros-planning/moveit_msgs.git', version: indigo-devel}
+- git: {local-name: moveit_msgs, uri: 'https://github.com/ros-planning/moveit_msgs.git', version: jade-devel}
 - git: {local-name: moveit_plugins, uri: 'https://github.com/ros-planning/moveit_plugins.git', version: indigo-devel}
 - git: {local-name: moveit_commander, uri: 'https://github.com/ros-planning/moveit_commander.git', version: indigo-devel}
 - git: {local-name: moveit_resources, uri: 'https://github.com/ros-planning/moveit_resources.git', version: master}
