@@ -7,3 +7,5 @@
 - git: {local-name: moveit_commander, uri: 'https://github.com/ros-planning/moveit_commander.git', version: indigo-devel}
 - git: {local-name: moveit_resources, uri: 'https://github.com/ros-planning/moveit_resources.git', version: master}
 - git: {local-name: moveit_docs, uri: 'https://github.com/ros-planning/moveit_docs.git', version: jade-devel}
+# Required until warehouse_ros 0.9.0 is released
+- git: {local-name: warehouse_ros, uri: 'https://github.com/ros-planning/warehouse_ros.git', version: jade-devel}
