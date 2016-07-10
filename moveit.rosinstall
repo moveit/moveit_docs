@@ -1,7 +1,6 @@
 - git: {local-name: moveit_core, uri: 'https://github.com/ros-planning/moveit_core.git', version: kinetic-devel}
 - git: {local-name: moveit_planners, uri: 'https://github.com/ros-planning/moveit_planners.git', version: kinetic-devel}
-# TODO: change branch of moveit_ros and remove davetcoleman
-- git: {local-name: moveit_ros, uri: 'https://github.com/davetcoleman/moveit_ros.git', version: cbrew_warehouse_ros_refactor}
+- git: {local-name: moveit_ros, uri: 'https://github.com/ros-planning/moveit_ros.git', version: jade-devel}
 - git: {local-name: moveit_setup_assistant, uri: 'https://github.com/ros-planning/moveit_setup_assistant.git', version: jade-devel}
 - git: {local-name: moveit_msgs, uri: 'https://github.com/ros-planning/moveit_msgs.git', version: jade-devel}
 - git: {local-name: moveit_plugins, uri: 'https://github.com/ros-planning/moveit_plugins.git', version: jade-devel}
